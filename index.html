@@ -43,20 +43,37 @@
       font-size: 2rem;
       margin-bottom: 1rem;
     }
+
     .portfolio-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 1rem;
     }
-    .portfolio-grid div {
+
+    .portfolio-item {
+      overflow: hidden;
+      border-radius: 8px;
       background-color: #222;
-      height: 200px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #888;
-      font-size: 1rem;
+      transition: transform 0.3s ease, opacity 0.3s ease;
     }
+
+    .portfolio-item:hover {
+      transform: scale(1.03);
+      opacity: 0.95;
+    }
+
+    .portfolio-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.4s ease;
+    }
+
+    .portfolio-item:hover img {
+      transform: scale(1.05);
+    }
+
     footer {
       background-color: #1a1a1a;
       text-align: center;
@@ -82,23 +99,26 @@
     <p>Sou ilustrador e designer com 39 anos, signo Leão — e gosto de criar com presença. Nos últimos tempos, mergulhei de 
        corpo e alma na ilustração digital e na pintura em aguarela, explorando texturas, luzes e narrativas visuais que conectam.
        A arte é meu campo de descoberta, e estou sempre em busca de formas novas de expressar o que palavras não dizem. 
-       Cada pincelada, seja virtual ou à mão, carrega emoção e intenção.
-
-
-    I’m a 39-year-old illustrator and designer, born under the sign of Leo — and I bring that bold spirit to everything I create. Lately, 
-    I’ve been diving deep into the world of digital illustration and watercolor painting, exploring textures, light,and emotion with fresh intensity.
-    Art is my way of speaking without words. Whether it's a digital brushstroke or a splash of pigment, every image I craft is driven
-    by passion and the urge to connect through visual storytelling.
-</p>
+       Cada pincelada, seja virtual ou à mão, carrega emoção e intenção.</p>
+    <p>I’m a 39-year-old illustrator and designer, born under the sign of Leo — and I bring that bold spirit to everything I create. Lately, 
+       I’ve been diving deep into the world of digital illustration and watercolor painting, exploring textures, light, and emotion with fresh intensity.
+       Art is my way of speaking without words. Whether it's a digital brushstroke or a splash of pigment, every image I craft is driven
+       by passion and the urge to connect through visual storytelling.</p>
   </section>
 
   <section id="portfolio">
     <h2>Portfólio</h2>
     <div class="portfolio-grid">
-      <div class="portfolio-grid"> <div><img src="ilustrações_2025/IMG_20250619_160556.jpg" alt="Arte 1" /></div> 
-      <div><img src="ilustrações_2025/MG_20250619_192240.jpg" alt="Arte 2" /></div> 
-      <div><img src="lustrações_2025/IMG_20250619_192244.jpg" alt="Arte 3" /></div>
-         </div>
+      <div class="portfolio-item">
+        <img src="ilustrações_2025/IMG_20250619_160556.jpg" alt="Arte 1" />
+      </div>
+      <div class="portfolio-item">
+        <img src="ilustrações_2025/MG_20250619_192240.jpg" alt="Arte 2" />
+      </div>
+      <div class="portfolio-item">
+        <img src="ilustrações_2025/IMG_20250619_192244.jpg" alt="Arte 3" />
+      </div>
+    </div>
   </section>
 
   <section id="contato">
@@ -112,3 +132,4 @@
   </footer>
 </body>
 </html>
+
