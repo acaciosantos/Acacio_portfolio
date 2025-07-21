@@ -51,7 +51,6 @@
       margin-bottom: 1rem;
     }
 
-    /* ⬇️ Grelha responsiva para a galeria */
     .portfolio-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -62,8 +61,11 @@
       background-color: #222;
       border-radius: 8px;
       overflow: hidden;
-      min-height: 250px; /* Garante espaço visível */
+      min-height: 250px;
       transition: transform 0.3s ease, opacity 0.3s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
     .portfolio-item:hover {
@@ -73,14 +75,31 @@
 
     .portfolio-item img {
       width: 100%;
-      height: auto; /* Mantém proporção original */
+      height: auto;
       object-fit: cover;
       display: block;
       border: none;
+      transition: transform 0.3s;
+      background: #333;
     }
 
     .portfolio-item:hover img {
       transform: scale(1.05);
+    }
+
+    .portfolio-item img:empty,
+    .portfolio-item img:not([src]) {
+      background: #333;
+      color: #bbb;
+    }
+
+    @media (max-width: 500px) {
+      section {
+        padding: 1rem 0.5rem;
+      }
+      .portfolio-grid {
+        grid-template-columns: 1fr;
+      }
     }
 
     footer {
@@ -100,7 +119,6 @@
       <a href="#sobre">Sobre</a>
       <a href="#portfolio">Portfólio</a>
       <a href="#contato">Contato</a>
-      
     </nav>
   </header>
 
@@ -120,13 +138,13 @@
   <h2>Portfólio</h2>
   <div class="portfolio-grid">
     <div class="portfolio-item">
-      <img src="galeria/IMG_20250619_160556.jpg" alt="Arte 1" />
+      <img src="galeria/IMG_20250619_160556.jpg" alt="Ilustração de retrato digital" loading="lazy" />
     </div>
     <div class="portfolio-item">
-      <img src="galeria/IMG_20250619_192240.jpg" alt="Arte 2" />
+      <img src="galeria/IMG_20250619_192240.jpg" alt="Pintura em aguarela" loading="lazy" />
     </div>
     <div class="portfolio-item">
-      <img src="galeria/IMG_20250619_192244.jpg" alt="Arte 3" />
+      <img src="galeria/IMG_20250619_192244.jpg" alt="Arte experimental digital" loading="lazy" />
     </div>
   </div>
 </section>
