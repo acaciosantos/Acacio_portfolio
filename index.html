@@ -259,6 +259,26 @@
 #idioma-toggle button:hover {
   background-color: #fff;
 }
+    #diario-visual {
+  padding: 3rem 2rem;
+  background-color: rgba(24, 24, 24, 0.85);
+  border-top: 2px solid #333;
+  margin-top: 3rem;
+  text-align: center;
+}
+
+#diario-visual h2 {
+  font-size: 2rem;
+  font-family: 'Montserrat', sans-serif;
+  color: #ffcc00;
+  margin-bottom: 1.5rem;
+}
+
+#flipbook {
+  margin: auto;
+  box-shadow: 0 0 20px rgba(0,0,0,0.4);
+  border-radius: 10px;
+}
 
   </style>
 </head>
@@ -273,10 +293,12 @@
       <a href="#sobre">Sobre</a>
       <a href="#portfolio">Portfólio</a>
       <a href="#contato">Contato</a>
+      <a href="#diario-visual">Diário Gráfico</a>
     </nav>
      <div id="idioma-toggle">
       <button onclick="mostrarPT()">PT 🇵🇹</button>
       <button onclick="mostrarEN()">EN 🇬🇧</button>
+       
     </div>
   </header>
  </header>
@@ -323,14 +345,15 @@
       </div>
     </div>
 </section>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/turn.js@4/turn.min.css">
-<script src="https://cdn.jsdelivr.net/npm/turn.js@4/turn.min.js"></script>
-<div id="flipbook">
-  <div><img src="1.jpg" alt="Página 1"></div>
-  <div><img src="2.jpg" alt="Página 2"></div>
-  <div><img src="3.jpg" alt="Página 3"></div>
-  <!-- adicione quantas páginas quiser -->
-</div>
+<section id="diario-visual">
+  <h2>Diário Gráfico</h2>
+  <div id="flipbook">
+    <div><img src="1.jpg" alt="Página 1"></div>
+    <div><img src="2.jpg" alt="Página 2"></div>
+    <div><img src="3.jpg" alt="Página 3"></div>
+    <!-- adicione mais páginas se quiser -->
+  </div>
+</section>
 
 
   <section id="portfolio">
