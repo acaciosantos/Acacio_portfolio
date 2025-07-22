@@ -338,6 +338,30 @@
       </div>
     </div>
   </section>
+    <div id="frase-aleatoria" style="margin-top: 2rem; font-style: italic; color: #ffe066;"></div>
+
+<script>
+  const frases = [
+    "A arte é o silêncio que sabe falar.",
+    "Cada traço é uma memória em construção.",
+    "Criar é deixar o invisível ganhar forma.",
+    "O digital é o meu pincel moderno.",
+    "As cores também têm saudade.",
+    "Aguarela é o pensamento quando decide fluir."
+  ];
+
+  function atualizarFrase() {
+    const fraseAleatoria = frases[Math.floor(Math.random() * frases.length)];
+    document.getElementById("frase-aleatoria").textContent = fraseAleatoria;
+  }
+
+  // Atualiza na carga inicial
+  atualizarFrase();
+
+  // Atualiza a cada 2 minutos (120.000 milissegundos)
+  setInterval(atualizarFrase, 120000);
+</script>
+
     
 <section id="contato">
     <h2>Contato</h2>
