@@ -347,22 +347,7 @@
 
       </div>
     </div>
-<div class="book-gallery">
-  <button onclick="prevPage()" class="nav-btn">⟵ Anterior</button>
-  
-  <div id="page" class="book-page">
-    <img src="1.jpg" alt="Página 1">
-    <p>Texto da página 1</p>
-     <img src="2.jpg" alt="Página 2">
-    <p>Texto da página 1</p>
-     <img src="3.jpg" alt="Página 3">
-    <p>Texto da página 1</p>
-     <img src="4.jpg" alt="Página 4">
-    <p>Texto da página 1</p>
-  </div>
-  
-  <button onclick="nextPage()" class="nav-btn">Próximo ⟶</button>
-</div>
+<div id="page" class="book-page"></div>
 
 
 
@@ -583,12 +568,13 @@
     let currentPage = 0;
 
     function updatePage() {
-      const pageElement = document.getElementById('page');
-      pageElement.innerHTML = `
-        <img src="${pages[currentPage].img}" alt="Página ${currentPage + 1}">
-        <p>${pages[currentPage].text}</p>
-      `;
-    }
+  const pageElement = document.getElementById('page');
+  pageElement.innerHTML = `
+    <img src="${pages[currentPage].img}" alt="Página ${currentPage + 1}">
+    <p>${pages[currentPage].text}</p>
+  `;
+}
+
 
     function nextPage() {
       if (currentPage < pages.length - 1) {
