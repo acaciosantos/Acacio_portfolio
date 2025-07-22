@@ -208,6 +208,64 @@
       background: #fff;
       color: #111;
     }
+    /* Estilo geral do header */
+header {
+  background-color: #f4f4f4;
+  padding: 20px;
+  text-align: center;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Título e subtítulo */
+header h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+header p {
+  font-size: 1.2em;
+  color: #777;
+}
+
+/* Navegação */
+nav {
+  margin-top: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+  color: #005baa;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #ff6600;
+}
+
+/* Botões de idioma */
+#idioma-toggle {
+  margin-top: 20px;
+}
+
+#idioma-toggle button {
+  padding: 10px 20px;
+  margin: 0 5px;
+  border: none;
+  background-color: #005baa;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+#idioma-toggle button:hover {
+  background-color: #ff6600;
+}
+
   </style>
 </head>
 <body>
@@ -219,10 +277,13 @@
       <a href="#sobre">Sobre</a>
       <a href="#portfolio">Portfólio</a>
       <a href="#contato">Contato</a>
+      <a href="#diario-visual">Diário Gráfico</a>
     </nav>
-  </header>
-
-  <section id="sobre">
+    <div id="idioma-toggle">
+      <button onclick="mostrarPT()">PT 🇵🇹</button>
+      <button onclick="mostrarEN()">EN 🇬🇧</button>
+    </div>
+    <section id="sobre">
     <h2>Sobre</h2>
     <div class="sobre-flex">
       <img src="IMG_9015.JPEG" alt="Foto de Acácio Santos" class="sobre-foto" />
@@ -319,9 +380,19 @@
       retina_detect: true
     });
   </script>
+    <script>
+  function mostrarPT() {
+    document.documentElement.lang = "pt";
+    // Aqui você pode alterar textos, elementos visuais, etc.
+  }
+
+  function mostrarEN() {
+    document.documentElement.lang = "en";
+    // Aqui também: troca de conteúdo para inglês.
+  }
+</script>
+
 </body>
 </html>
 
   
-</body>
-</html>
