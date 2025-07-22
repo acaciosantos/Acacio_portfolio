@@ -19,8 +19,17 @@
       scroll-behavior: smooth;
     }
 
+    #particles-js {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      top: 0;
+      left: 0;
+    }
+
     header {
-      background-color: #181818;
+      background-color: rgba(24, 24, 24, 0.9);
       padding: 2rem;
       text-align: center;
       border-bottom: 2px solid #333;
@@ -54,6 +63,8 @@
       padding: 3rem 2rem;
       max-width: 900px;
       margin: auto;
+      position: relative;
+      z-index: 1;
     }
 
     h2 {
@@ -102,12 +113,14 @@
     }
 
     footer {
-      background-color: #181818;
+      background-color: rgba(24, 24, 24, 0.9);
       text-align: center;
       padding: 2rem;
       font-size: 0.9rem;
       color: #666;
       border-top: 2px solid #333;
+      position: relative;
+      z-index: 1;
     }
 
     .btn-contato {
@@ -123,6 +136,8 @@
   </style>
 </head>
 <body>
+  <div id="particles-js"></div>
+
   <header>
     <h1>Acácio Santos</h1>
     <p>Ilustrador & Designer Visual</p>
@@ -137,39 +152,78 @@
     <h2>Sobre</h2>
     <p>Sou ilustrador e designer de 39 anos, nascido sob o signo Leão — e gosto de criar com coragem e presença. Nos últimos anos, mergulhei intensamente na ilustração digital e na pintura em aguarela, buscando texturas, luzes e narrativas visuais que emocionam e conectam.</p>
     <p>A arte para mim é linguagem emocional. Cada traço, seja com pincel físico ou digital, carrega intenção e sentimento. Meu trabalho equilibra técnica e poesia, sempre com o propósito de comunicar o que palavras não alcançam.</p>
-
-
     <p>I’m a 39-year-old illustrator and designer, born under the sign of Leo — and I love creating with courage and presence. Over the past few years, I’ve immersed myself deeply in digital illustration and watercolor painting, exploring textures, light, and visual narratives that evoke emotion and connection.</p>
-<p>For me, art is an emotional language. Every stroke—whether with a physical brush or a digital tool—carries intention and feeling. My work balances technique and poetry, always driven by the desire to express what words cannot fully convey.</p>
-
+    <p>For me, art is an emotional language. Every stroke—whether with a physical brush or a digital tool—carries intention and feeling. My work balances technique and poetry, always driven by the desire to express what words cannot fully convey.</p>
   </section>
 
   <section id="portfolio">
     <h2>Portfólio</h2>
     <div class="portfolio-grid">
-      <div class="portfolio-item"><img src="IMG_20250619_160556.jpg" alt="Aquarela  – THE BIRD" /></div>
-      <div class="portfolio-item"><img src="IMG_20250619_192240.jpg" alt="Aquarela  – THE BIRD" /></div>
-      <div class="portfolio-item"><img src="IMG_20250619_192244.jpg" alt="Aquarela  – THE BIRD" /></div>
-      <div class="portfolio-item"><img src="IMG_1670.JPG" alt="Digital" /></div>
-      <div class="portfolio-item"><img src="IMG_1671.JPG" alt="Digital" /></div>
-      <div class="portfolio-item"><img src="IMG_1672.JPG" alt="Digital" /></div>
-      <div class="portfolio-item"><img src="IMG_1673.JPG" alt="Digital" /></div>
-      <div class="portfolio-item"><img src="IMG_1674.JPG" alt="Digital" /></div>
-      <div class="portfolio-item"><img src="IMG_1675.JPG" alt="Digital" /></div>
+      <div class="portfolio-item"><img src="images/IMG_20250619_160556.jpg" alt="Aquarela – THE BIRD" /></div>
+      <div class="portfolio-item"><img src="images/IMG_20250619_192240.jpg" alt="Aquarela – THE BIRD" /></div>
+      <div class="portfolio-item"><img src="images/IMG_20250619_192244.jpg" alt="Aquarela – THE BIRD" /></div>
+      <div class="portfolio-item"><img src="images/IMG_1670.JPG" alt="Digital" /></div>
+      <div class="portfolio-item"><img src="images/IMG_1671.JPG" alt="Digital" /></div>
+      <div class="portfolio-item"><img src="images/IMG_1672.JPG" alt="Digital" /></div>
+      <div class="portfolio-item"><img src="images/IMG_1673.JPG" alt="Digital" /></div>
+      <div class="portfolio-item"><img src="images/IMG_1674.JPG" alt="Digital" /></div>
+      <div class="portfolio-item"><img src="images/IMG_1675.JPG" alt="Digital" /></div>
     </div>
   </section>
 
   <section id="contato">
     <h2>Contato</h2>
     <p>Entre em contato para colaborações ou encomendas personalizadas.</p>
-    <p>Email: <a href="mailto:ajasantos2@email.com">exemplo@email.com</a></p>
+    <p>Email: <a href="mailto:ajasantos2@email.com">ajasantos2@email.com</a></p>
     <p>Instagram: <a href="https://instagram.com/zeca_ilustra" target="_blank">@zeca_ilustra</a></p>
-    <a class="btn-contato" href="mailto:exemplo@email.com">Enviar mensagem</a>
+    <a class="btn-contato" href="mailto:ajasantos2@email.com">Enviar mensagem</a>
   </section>
 
   <footer>
     &copy; 2025 Acácio Santos. Todos os direitos reservados.
   </footer>
+
+  <!-- Particles.js script -->
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <script>
+    particlesJS("particles-js", {
+      particles: {
+        number: { value: 60 },
+        color: { value: "#ffcc00" },
+        shape: { type: "circle" },
+        opacity: { value: 0.3 },
+        size: { value: 3 },
+        line_linked: {
+          enable: true,
+          distance: 120,
+          color: "#ffcc00",
+          opacity: 0.3,
+          width: 1
+        },
+        move: {
+          enable: true,
+          speed: 2,
+          direction: "none",
+          random: true,
+          out_mode: "out"
+        }
+      },
+      interactivity: {
+        detect_on: "canvas",
+        events: {
+          onhover: { enable: true, mode: "grab" },
+          onclick: { enable: false }
+        },
+        modes: {
+          grab: {
+            distance: 150,
+            line_linked: { opacity: 0.5 }
+          }
+        }
+      },
+      retina_detect: true
+    });
+  </script>
 </body>
 </html>
 
