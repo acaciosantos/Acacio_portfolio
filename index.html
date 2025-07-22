@@ -3,24 +3,34 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
- <title>Acácio Santos - Designer/Ilustrador</title>
+  <title>Acácio Santos – Ilustrador e Designer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Open+Sans&display=swap" rel="stylesheet" />
   <style>
-    body {
+    * {
       margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #111;
-      color: #f1f1f1;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background-color: #0f0f0f;
+      color: #e5e5e5;
+      scroll-behavior: smooth;
     }
 
     header {
-      background-color: #1a1a1a;
+      background-color: #181818;
       padding: 2rem;
       text-align: center;
+      border-bottom: 2px solid #333;
     }
 
     header h1 {
-      margin: 0;
-      font-size: 2.5rem;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 2.7rem;
+      letter-spacing: 1px;
+      color: #ffcc00;
     }
 
     header p {
@@ -30,14 +40,14 @@
     }
 
     nav {
-      text-align: center;
       margin-top: 1rem;
     }
 
     nav a {
       margin: 0 1rem;
-      color: #f1f1f1;
+      color: #ffcc00;
       text-decoration: none;
+      font-weight: bold;
     }
 
     section {
@@ -49,6 +59,8 @@
     h2 {
       font-size: 2rem;
       margin-bottom: 1rem;
+      color: #ffcc00;
+      font-family: 'Montserrat', sans-serif;
     }
 
     .portfolio-grid {
@@ -78,19 +90,6 @@
       height: auto;
       object-fit: cover;
       display: block;
-      border: none;
-      transition: transform 0.3s;
-      background: #333;
-    }
-
-    .portfolio-item:hover img {
-      transform: scale(1.05);
-    }
-
-    .portfolio-item img:empty,
-    .portfolio-item img:not([src]) {
-      background: #333;
-      color: #bbb;
     }
 
     @media (max-width: 500px) {
@@ -103,18 +102,30 @@
     }
 
     footer {
-      background-color: #1a1a1a;
+      background-color: #181818;
       text-align: center;
       padding: 2rem;
       font-size: 0.9rem;
       color: #666;
+      border-top: 2px solid #333;
+    }
+
+    .btn-contato {
+      display: inline-block;
+      margin-top: 1rem;
+      background-color: #ffcc00;
+      color: #111;
+      padding: 0.7rem 1.2rem;
+      border-radius: 4px;
+      text-decoration: none;
+      font-weight: bold;
     }
   </style>
 </head>
 <body>
   <header>
     <h1>Acácio Santos</h1>
-    <p>Designer / Ilustrador</p>
+    <p>Ilustrador & Designer Visual</p>
     <nav>
       <a href="#sobre">Sobre</a>
       <a href="#portfolio">Portfólio</a>
@@ -124,59 +135,26 @@
 
   <section id="sobre">
     <h2>Sobre</h2>
-    <p>Sou ilustrador e designer com 39 anos, signo Leão — e gosto de criar com presença. Nos últimos tempos, mergulhei de 
-       corpo e alma na ilustração digital e na pintura em aguarela, explorando texturas, luzes e narrativas visuais que conectam.
-       A arte é meu campo de descoberta, e estou sempre em busca de formas novas de expressar o que palavras não dizem. 
-       Cada pincelada, seja virtual ou à mão, carrega emoção e intenção.</p>
-    <p>I’m a 39-year-old illustrator and designer, born under the sign of Leo — and I bring that bold spirit to everything I create. Lately, 
-       I’ve been diving deep into the world of digital illustration and watercolor painting, exploring textures, light, and emotion with fresh intensity.
-       Art is my way of speaking without words. Whether it's a digital brushstroke or a splash of pigment, every image I craft is driven
-       by passion and the urge to connect through visual storytelling.</p>
+    <p>Sou ilustrador e designer de 39 anos, nascido sob o signo Leão — e gosto de criar com coragem e presença. Nos últimos anos, mergulhei intensamente na ilustração digital e na pintura em aguarela, buscando texturas, luzes e narrativas visuais que emocionam e conectam.</p>
+    <p>A arte para mim é linguagem emocional. Cada traço, seja com pincel físico ou digital, carrega intenção e sentimento. Meu trabalho equilibra técnica e poesia, sempre com o propósito de comunicar o que palavras não alcançam.</p>
   </section>
 
-<section id="portfolio">
-  <h2>Portfólio</h2>
-  <div class="portfolio-grid">
-    <div class="portfolio-item">
-      <img src="IMG_20250619_160556.jpg" alt="Arte 1" />
+  <section id="portfolio">
+    <h2>Portfólio</h2>
+    <div class="portfolio-grid">
+      <div class="portfolio-item"><img src="IMG_20250619_160556.jpg" alt="Aquarela Digital – Maré Branda" /></div>
+      <div class="portfolio-item"><img src="IMG_20250619_192240.jpg" alt="Retrato com Luz – Técnica Mista" /></div>
+      <div class="portfolio-item"><img src="IMG_20250619_192244.jpg" alt="Textura Urbana – Colagem Digital" /></div>
+      <!-- ... continue com as demais imagens ... -->
     </div>
-    <div class="portfolio-item">
-      <img src="IMG_20250619_192240.jpg" alt="Arte 2" />
-    </div>
-    <div class="portfolio-item">
-      <img src="IMG_20250619_192244.jpg" alt="Arte 3" />
-    </div>
-    <div class="portfolio-item">
-      <img src="IMG_20250602_180226.jpg" alt="Arte 4" />
-    </div>
-     <div class="portfolio-item">
-      <img src="IMG_20250602_180441.jpg" alt="Arte 5" />
-    </div>
-      <div class="portfolio-item">
-      <img src="IMG_1674.JPG" alt="Arte 6" />
-        </div>
-        <div class="portfolio-item">
-      <img src="IMG_1670.JPG" alt="Arte 7" />
-    </div>
-    <div class="portfolio-item">
-      <img src="IMG_1671.JPG" alt="Arte 8" />
-    </div>
-    <div class="portfolio-item">
-      <img src="IMG_1672.JPG" alt="Arte 9" />
-    </div>
-    <div class="portfolio-item">
-      <img src="IMG_1673.JPG" alt="Arte 10" />
-    </div>
-     <div class="portfolio-item">
-      <img src="IMG_1675.JPG" alt="Arte 11" />
-     </div>
-  </div>
-</section>
+  </section>
 
   <section id="contato">
     <h2>Contato</h2>
-    <p>Email: exemplo@email.com</p>
-    <p>Instagram: @zeca_ilustras</p>
+    <p>Entre em contato para colaborações ou encomendas personalizadas.</p>
+    <p>Email: <a href="mailto:exemplo@email.com">exemplo@email.com</a></p>
+    <p>Instagram: <a href="https://instagram.com/zeca_ilustras" target="_blank">@zeca_ilustras</a></p>
+    <a class="btn-contato" href="mailto:exemplo@email.com">Enviar mensagem</a>
   </section>
 
   <footer>
@@ -184,4 +162,5 @@
   </footer>
 </body>
 </html>
+
 
