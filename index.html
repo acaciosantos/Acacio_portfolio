@@ -6,241 +6,242 @@
   <title>Acácio Santos – Ilustrador e Designer</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Open+Sans&display=swap" rel="stylesheet" />
   <style>
-   /* 🌍 RESET GERAL */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+    /* ✨ Estilos base e layout */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-body {
-  font-family: 'Open Sans', sans-serif;
-  background-color: #0f0f0f;
-  color: #e5e5e5;
-  scroll-behavior: smooth;
-}
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background-color: #0f0f0f;
+      color: #e5e5e5;
+      scroll-behavior: smooth;
+    }
 
-/* 🌌 FUNDO COM PARTÍCULAS */
-#particles-js {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  top: 0;
-  left: 0;
-}
+    #particles-js {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      top: 0;
+      left: 0;
+    }
 
-/* 🧭 CABEÇALHO */
-header {
-  background-color: rgba(24, 24, 24, 0.9);
-  padding: 2rem;
-  text-align: center;
-  border-bottom: 2px solid #333;
-}
+    header {
+      background-color: rgba(24, 24, 24, 0.9);
+      padding: 2rem;
+      text-align: center;
+      border-bottom: 2px solid #333;
+    }
 
-header h1 {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 2.7rem;
-  letter-spacing: 1px;
-  color: #ffcc00;
-}
+    header h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 2.7rem;
+      color: #ffcc00;
+      letter-spacing: 1px;
+    }
 
-header p {
-  margin-top: 0.5rem;
-  font-size: 1.2rem;
-  color: #aaa;
-}
+    header p {
+      margin-top: 0.5rem;
+      font-size: 1.2rem;
+      color: #aaa;
+    }
 
-/* 🧭 NAVEGAÇÃO */
-nav {
-  margin-top: 1rem;
-}
+    nav {
+      margin-top: 1rem;
+    }
 
-nav a {
-  margin: 0 1rem;
-  color: #ffcc00;
-  text-decoration: none;
-  font-weight: bold;
-  transition: color 0.2s;
-}
+    nav a {
+      margin: 0 1rem;
+      color: #ffcc00;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.2s;
+    }
 
-nav a:hover {
-  color: #fff;
-}
+    nav a:hover {
+      color: #fff;
+    }
 
-/* 📦 SEÇÕES GERAIS */
-section {
-  padding: 3rem 2rem;
-  max-width: 900px;
-  margin: auto;
-  position: relative;
-  z-index: 1;
-}
+    section {
+      padding: 3rem 2rem;
+      max-width: 900px;
+      margin: auto;
+      position: relative;
+      z-index: 1;
+    }
 
-h2 {
-  font-size: 2rem;
-  margin-bottom: 1.2rem;
-  color: #ffcc00;
-  font-family: 'Montserrat', sans-serif;
-  border-left: 5px solid #ffcc00;
-  padding-left: 0.7rem;
-}
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 1.2rem;
+      color: #ffcc00;
+      font-family: 'Montserrat', sans-serif;
+      border-left: 5px solid #ffcc00;
+      padding-left: 0.7rem;
+    }
 
-/* 👤 SEÇÃO SOBRE */
-.sobre-flex {
-  display: flex;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  gap: 2rem;
-}
+    /* 👤 Sobre */
+    .sobre-flex {
+      display: flex;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
 
-.sobre-foto {
-  width: 130px;
-  height: 130px;
-  border-radius: 50%;
-  object-fit: cover;
-  box-shadow: 0 0 10px rgba(0,0,0,0.5);
-  margin-bottom: 1rem;
-  flex-shrink: 0;
-}
+    .sobre-foto {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 0 10px rgba(0,0,0,0.5);
+      flex-shrink: 0;
+    }
 
-.sobre-textos {
-  flex: 1;
-  min-width: 250px;
-  color: #ddd;
-  font-size: 1.08rem;
-  line-height: 1.7;
-}
+    .sobre-textos {
+      flex: 1;
+      min-width: 250px;
+      font-size: 1.08rem;
+      line-height: 1.7;
+      color: #ddd;
+    }
 
-.sobre-textos p {
-  margin-bottom: 0.8rem;
-}
+    .sobre-textos p {
+      margin-bottom: 0.8rem;
+    }
 
-/* 🖼️ GALERIA PORTFÓLIO */
-.portfolio-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1rem;
-  margin-bottom: 2.5rem;
-}
+    /* 🖼️ Portfólio */
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+      margin-bottom: 2.5rem;
+    }
 
-.portfolio-item {
-  background-color: #222;
-  border-radius: 8px;
-  overflow: hidden;
-  min-height: 250px;
-  transition: transform 0.3s ease, opacity 0.3s ease;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+    .portfolio-item {
+      background-color: #222;
+      border-radius: 8px;
+      overflow: hidden;
+      min-height: 250px;
+      transition: transform 0.3s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
 
-.portfolio-item img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  display: block;
-  transition: transform 0.4s ease;
-}
+    .portfolio-item img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
 
-.portfolio-item:hover img {
-  transform: scale(1.1);
-  cursor: zoom-in;
-}
+    .portfolio-item:hover img {
+      transform: scale(1.1);
+      cursor: zoom-in;
+    }
 
-/* ✏️ LEGENDA NAS IMAGENS */
-figure {
-  margin: 0;
-  text-align: center;
-}
+    figure {
+      margin: 0;
+      text-align: center;
+    }
 
-figcaption {
-  margin-top: 0.5rem;
-  font-size: 0.95rem;
-  color: #aaa;
-  font-style: italic;
-}
+    figcaption {
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #aaa;
+      font-style: italic;
+    }
 
-/* 📜 MANIFESTO VISUAL */
-.manifesto-visual {
-  margin-top: 2.5rem;
-  font-size: 1.08rem;
-  line-height: 1.7;
-  color: #ccc;
-  background: rgba(24,24,24,0.6);
-  border-left: 5px solid #ffcc00;
-  padding: 1.3rem 1.2rem;
-  border-radius: 8px;
-}
+    /* 🎨 Manifesto Visual */
+    .manifesto-visual {
+      margin-top: 2rem;
+      padding: 1.3rem 1.2rem;
+      background-color: rgba(24,24,24,0.6);
+      border-left: 5px solid #ffcc00;
+      border-radius: 8px;
+      font-size: 1.08rem;
+      line-height: 1.7;
+      color: #ccc;
+    }
 
-.manifesto-visual h3 {
-  color: #ffcc00;
-  margin-bottom: 1rem;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 1.3rem;
-  border: none;
-  padding: 0;
-}
+    .manifesto-visual h3 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.3rem;
+      margin-bottom: 1rem;
+      color: #ffcc00;
+    }
 
-.manifesto-visual em,
-.manifesto-visual strong {
-  color: #ffe066;
-  font-style: italic;
-}
+    .manifesto-visual em,
+    .manifesto-visual strong {
+      color: #ffe066;
+      font-style: italic;
+    }
 
-/* 📱 RESPONSIVIDADE PARA MOBILE */
-@media (max-width: 500px) {
-  .portfolio-item img {
-    max-height: 300px;
-    object-fit: contain;
-  }
+    /* 📱 Responsividade */
+    @media (max-width: 500px) {
+      .portfolio-grid {
+        grid-template-columns: 1fr;
+      }
 
-  .portfolio-grid {
-    grid-template-columns: 1fr;
-  }
+      .portfolio-item img {
+        max-height: 300px;
+        object-fit: contain;
+      }
 
-  .sobre-flex {
-    flex-direction: column;
-    align-items: center;
-  }
+      .sobre-flex {
+        flex-direction: column;
+        align-items: center;
+      }
 
-  .sobre-foto {
-    margin-bottom: 1rem;
-  }
-}
+      .sobre-foto {
+        margin-bottom: 1rem;
+      }
+    }
 
-/* 📬 RODAPÉ */
-footer {
-  background-color: rgba(24, 24, 24, 0.9);
-  text-align: center;
-  padding: 2rem;
-  font-size: 0.95rem;
-  color: #888;
-  border-top: 2px solid #333;
-  position: relative;
-  z-index: 1;
-}
+    /* 📬 Contato */
+    .btn-contato {
+      display: inline-block;
+      margin-top: 1rem;
+      background-color: #ffcc00;
+      color: #111;
+      padding: 0.7rem 1.2rem;
+      border-radius: 4px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.2s, color 0.2s;
+    }
 
-/* 📩 BOTÃO DE CONTATO */
-.btn-contato {
-  display: inline-block;
-  margin-top: 1rem;
-  background-color: #ffcc00;
-  color: #111;
-  padding: 0.7rem 1.2rem;
-  border-radius: 4px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: background 0.2s, color 0.2s;
-}
+    .btn-contato:hover {
+      background-color: #fff;
+      color: #111;
+    }
 
-.btn-contato:hover {
-  background: #fff;
-  color: #111;
-}
+    /* 📥 Rodapé */
+    footer {
+      background-color: rgba(24, 24, 24, 0.9);
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.95rem;
+      color: #888;
+      border-top: 2px solid #333;
+    }
+  </style>
+</head>
+<body>
 
+  <div id="particles-js"></div>
+
+  <header>
+    <h1>Acácio Santos</h1>
+    <p>Ilustrador & Designer Visual</p>
+    <nav>
+      <a href="#sobre">Sobre</a>
+      <a href="#portfolio">Portfólio</a>
+      <a href="#contato">Contato</a>
+    </nav>
   </header>
-
   <section id="sobre">
     <h2>Sobre</h2>
     <div class="sobre-flex">
