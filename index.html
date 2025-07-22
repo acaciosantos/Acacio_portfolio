@@ -444,6 +444,21 @@
   // Atualiza a cada 2 minutos (120.000 milissegundos)
   setInterval(atualizarFrase, 120000);
 </script>
+ <!-- HTML -->
+<section id="galeria" class="galeria">
+  <h2>Galeria</h2>
+  <div class="galeria-grid">
+    <img src="IMG_20250722_154725.jpg" alt="Ilustração 1" onclick="abrirModal(this.src)" />
+    <img src="IMG_20250722_154835.jpg" alt="Ilustração 2" onclick="abrirModal(this.src)" />
+    <img src="IMG_20250722_155133.jpg" alt="Ilustração 3" onclick="abrirModal(this.src)" />
+    <img src="arte1.jpg" alt="Ilustração 4" onclick="abrirModal(this.src)" />
+  </div>
+
+  <!-- Modal -->
+  <div id="modal" class="modal" onclick="fecharModal()">
+    <img id="modal-imagem" src="" alt="Imagem em destaque" />
+  </div>
+</section>
 
     
 <section id="contato">
