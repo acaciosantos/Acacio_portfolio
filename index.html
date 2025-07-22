@@ -91,16 +91,17 @@
       justify-content: center;
     }
 
-    .portfolio-item:hover {
-      transform: scale(1.03);
-      opacity: 0.95;
-    }
-
     .portfolio-item img {
       width: 100%;
       height: auto;
       object-fit: cover;
       display: block;
+      transition: transform 0.4s ease;
+    }
+
+    .portfolio-item:hover img {
+      transform: scale(1.2);
+      cursor: zoom-in;
     }
 
     @media (max-width: 500px) {
@@ -156,44 +157,22 @@
     <p>For me, art is an emotional language. Every stroke—whether with a physical brush or a digital tool—carries intention and feeling. My work balances technique and poetry, always driven by the desire to express what words cannot fully convey.</p>
   </section>
 
- <section id="portfolio">
-  <h2>Portfólio</h2>
-  <div class="portfolio-grid">
-    <div class="portfolio-item">
-      <img src="IMG_20250619_160556.jpg" alt="Arte 1" />
+  <section id="portfolio">
+    <h2>Portfólio</h2>
+    <div class="portfolio-grid">
+      <div class="portfolio-item"><img src="IMG_20250619_160556.jpg" alt="Arte 1" /></div>
+      <div class="portfolio-item"><img src="IMG_20250619_192240.jpg" alt="Arte 2" /></div>
+      <div class="portfolio-item"><img src="IMG_20250619_192244.jpg" alt="Arte 3" /></div>
+      <div class="portfolio-item"><img src="IMG_20250602_180226.jpg" alt="Arte 4" /></div>
+      <div class="portfolio-item"><img src="IMG_20250602_180441.jpg" alt="Arte 5" /></div>
+      <div class="portfolio-item"><img src="IMG_1674.JPG" alt="Arte 6" /></div>
+      <div class="portfolio-item"><img src="IMG_1670.JPG" alt="Arte 7" /></div>
+      <div class="portfolio-item"><img src="IMG_1671.JPG" alt="Arte 8" /></div>
+      <div class="portfolio-item"><img src="IMG_1672.JPG" alt="Arte 9" /></div>
+      <div class="portfolio-item"><img src="IMG_1673.JPG" alt="Arte 10" /></div>
+      <div class="portfolio-item"><img src="IMG_1675.JPG" alt="Arte 11" /></div>
     </div>
-    <div class="portfolio-item">
-      <img src="IMG_20250619_192240.jpg" alt="Arte 2" />
-    </div>
-    <div class="portfolio-item">
-      <img src="IMG_20250619_192244.jpg" alt="Arte 3" />
-    </div>
-    <div class="portfolio-item">
-      <img src="IMG_20250602_180226.jpg" alt="Arte 4" />
-    </div>
-     <div class="portfolio-item">
-      <img src="IMG_20250602_180441.jpg" alt="Arte 5" />
-    </div>
-      <div class="portfolio-item">
-      <img src="IMG_1674.JPG" alt="Arte 6" />
-        </div>
-        <div class="portfolio-item">
-      <img src="IMG_1670.JPG" alt="Arte 7" />
-    </div>
-    <div class="portfolio-item">
-      <img src="IMG_1671.JPG" alt="Arte 8" />
-    </div>
-    <div class="portfolio-item">
-      <img src="IMG_1672.JPG" alt="Arte 9" />
-    </div>
-    <div class="portfolio-item">
-      <img src="IMG_1673.JPG" alt="Arte 10" />
-    </div>
-     <div class="portfolio-item">
-      <img src="IMG_1675.JPG" alt="Arte 11" />
-     </div>
-  </div>
-
+  </section>
 
   <section id="contato">
     <h2>Contato</h2>
@@ -207,7 +186,6 @@
     &copy; 2025 Acácio Santos. Todos os direitos reservados.
   </footer>
 
-  <!-- Particles.js script -->
   <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
   <script>
     particlesJS("particles-js", {
@@ -250,3 +228,4 @@
   </script>
 </body>
 </html>
+
