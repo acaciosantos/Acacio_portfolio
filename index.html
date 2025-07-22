@@ -323,6 +323,14 @@
       </div>
     </div>
 </section>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/turn.js@4/turn.min.css">
+<script src="https://cdn.jsdelivr.net/npm/turn.js@4/turn.min.js"></script>
+<div id="flipbook">
+  <div><img src="1.jpg" alt="Página 1"></div>
+  <div><img src="2.jpg" alt="Página 2"></div>
+  <div><img src="3.jpg" alt="Página 3"></div>
+  <!-- adicione quantas páginas quiser -->
+</div>
 
 
   <section id="portfolio">
@@ -510,7 +518,16 @@
   animar.forEach(el => observador.observe(el));
 </script>
 <script>
-  
+  <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    $("#flipbook").turn({
+      width: 800,
+      height: 500,
+      autoCenter: true
+    });
+  });
+</script>
+
 </body>
 </html>
 
