@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<<!DOCTYPE html>
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8" />
@@ -6,6 +6,7 @@
   <title>Acácio Santos – Ilustrador e Designer</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Open+Sans&display=swap" rel="stylesheet" />
   <style>
+    /* ✨ Estilos base e layout */
     * {
       margin: 0;
       padding: 0;
@@ -27,8 +28,9 @@
       top: 0;
       left: 0;
     }
-header {
-      background-color: rgba(255, 255, 255, 0.05);
+
+    header {
+      background-color: rgba(24, 24, 24, 0.9);
       padding: 2rem;
       text-align: center;
       border-bottom: 2px solid #333;
@@ -37,14 +39,14 @@ header {
     header h1 {
       font-family: 'Montserrat', sans-serif;
       font-size: 2.7rem;
-      color: #ffffff;
+      color: #ffcc00;
       letter-spacing: 1px;
     }
 
     header p {
       margin-top: 0.5rem;
       font-size: 1.2rem;
-      color: #cccccc;
+      color: #aaa;
     }
 
     nav {
@@ -53,14 +55,14 @@ header {
 
     nav a {
       margin: 0 1rem;
-      color: #ffffff;
+      color: #ffcc00;
       text-decoration: none;
       font-weight: bold;
-      transition: color 0.2s ease;
+      transition: color 0.2s;
     }
 
     nav a:hover {
-      color: #aaaaaa;
+      color: #fff;
     }
 
     section {
@@ -74,111 +76,222 @@ header {
     h2 {
       font-size: 2rem;
       margin-bottom: 1.2rem;
-      color: #ffffff;
+      color: #ffcc00;
       font-family: 'Montserrat', sans-serif;
-      border-left: 5px solid #ffffff;
+      border-left: 5px solid #ffcc00;
       padding-left: 0.7rem;
     }
 
-    .manifesto-visual {
-      margin-top: 2rem;
-      padding: 1.3rem 1.2rem;
-      background-color: rgba(255,255,255,0.05);
-      border-left: 5px solid #ffffff;
-      border-radius: 8px;
+    /* 👤 Sobre */
+    .sobre-flex {
+      display: flex;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+
+    .sobre-foto {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 0 10px rgba(0,0,0,0.5);
+      flex-shrink: 0;
+    }
+
+    .sobre-textos {
+      flex: 1;
+      min-width: 250px;
       font-size: 1.08rem;
       line-height: 1.7;
-      color: #dddddd;
+      color: #ddd;
     }
 
-    .manifesto-visual h3,
-    .manifesto-visual em,
-    .manifesto-visual strong {
-      color: #ffffff;
-      font-style: italic;
+    .sobre-textos p {
+      margin-bottom: 0.8rem;
     }
 
-    figcaption,
-    .sobre-textos,
-    footer {
-      color: #cccccc;
-    }
-
-    .btn-contato,
-    #btn-prev,
-    #btn-next,
-    #idioma-toggle button {
-      background-color: #ffffff;
-      color: #000000;
-      font-weight: bold;
-      border: none;
-      border-radius: 4px;
-      padding: 0.7rem 1.2rem;
-      cursor: pointer;
-      transition: background 0.2s ease, color 0.2s ease;
-      font-family: 'Montserrat', sans-serif;
-    }
-
-    .btn-contato:hover,
-    #btn-prev:hover,
-    #btn-next:hover,
-    #idioma-toggle button:hover {
-      background-color: #cccccc;
-    }
-
-    .livro-container {
-      position: relative;
-      width: 100%;
-      max-width: 700px;
-      margin: auto;
-      overflow: hidden;
-    }
-
-    .pagina {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      opacity: 0;
-      transform: scale(0.95);
-      transition: opacity 0.6s ease, transform 0.6s ease;
-      position: absolute;
-      width: 100%;
-      left: 0;
-      top: 0;
-    }
-
-    .pagina.ativa {
-      opacity: 1;
-      transform: scale(1);
-      position: relative;
-    }
-
-    .pagina img {
-      width: 48%;
-      border-radius: 8px;
-      box-shadow: 0 8px 16px rgba(255,255,255,0.2);
+    /* 🖼️ Portfólio */
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+      margin-bottom: 2.5rem;
     }
 
     .portfolio-item {
-      background-color: #111111;
+      background-color: #222;
+      border-radius: 8px;
+      overflow: hidden;
+      min-height: 250px;
+      transition: transform 0.3s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
-    .galeria-grid img:hover {
-      transform: scale(1.05);
-      box-shadow: 0 8px 20px rgba(255, 255, 255, 0.1);
+    .portfolio-item img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+
+    .portfolio-item:hover img {
+      transform: scale(1.1);
+      cursor: zoom-in;
+    }
+
+    figure {
+      margin: 0;
+      text-align: center;
+    }
+
+    figcaption {
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      color: #aaa;
+      font-style: italic;
+    }
+
+    /* 🎨 Manifesto Visual */
+    .manifesto-visual {
+      margin-top: 2rem;
+      padding: 1.3rem 1.2rem;
+      background-color: rgba(24,24,24,0.6);
+      border-left: 5px solid #ffcc00;
+      border-radius: 8px;
+      font-size: 1.08rem;
+      line-height: 1.7;
+      color: #ccc;
+    }
+
+    .manifesto-visual h3 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.3rem;
+      margin-bottom: 1rem;
+      color: #ffcc00;
+    }
+
+    .manifesto-visual em,
+    .manifesto-visual strong {
+      color: #ffe066;
+      font-style: italic;
+    }
+
+    /* 📱 Responsividade */
+    @media (max-width: 500px) {
+      .portfolio-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .portfolio-item img {
+        max-height: 300px;
+        object-fit: contain;
+      }
+
+      .sobre-flex {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .sobre-foto {
+        margin-bottom: 1rem;
+      }
+    }
+
+    /* 📬 Contato */
+    .btn-contato {
+      display: inline-block;
+      margin-top: 1rem;
+      background-color: #ffcc00;
+      color: #111;
+      padding: 0.7rem 1.2rem;
+      border-radius: 4px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.2s, color 0.2s;
+    }
+
+    .btn-contato:hover {
+      background-color: #fff;
+      color: #111;
+    }
+
+    /* 📥 Rodapé */
+    footer {
+      background-color: rgba(24, 24, 24, 0.9);
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.95rem;
+      color: #888;
+      border-top: 2px solid #333;
+    }
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+    }
+
+    .portfolio-item {
+      background-color: #222;
+      border-radius: 8px;
+      overflow: hidden;
+      min-height: 250px;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .portfolio-item:hover {
+      transform: scale(1.03);
+      opacity: 0.95;
+    }
+
+    .portfolio-item img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      display: block;
+    }
+
+    @media (max-width: 500px) {
+      section {
+        padding: 1rem 0.5rem;
+      }
+      .portfolio-grid {
+        grid-template-columns: 1fr;
+      }
     }
 
     footer {
-      background-color: rgba(255, 255, 255, 0.05);
+      background-color: rgba(24, 24, 24, 0.9);
       text-align: center;
       padding: 2rem;
+      font-size: 0.9rem;
+      color: #666;
       border-top: 2px solid #333;
+      position: relative;
+      z-index: 1;
+    }
+
+    .btn-contato {
+      display: inline-block;
+      margin-top: 1rem;
+      background-color: #ffcc00;
+      color: #111;
+      padding: 0.7rem 1.2rem;
+      border-radius: 4px;
+      text-decoration: none;
+      font-weight: bold;
     }
   </style>
 </head>
 <body>
 
   <div id="particles-js"></div>
+
 
   <header>
     <h1>Acácio Santos</h1>
