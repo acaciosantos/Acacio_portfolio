@@ -264,16 +264,50 @@
   background-color: #fff;
 }
  
-    .galeria1 {
+  .livro-container {
+  position: relative;
+  width: 100%;
+  max-width: 700px;
+  margin: auto;
+  overflow: hidden;
+}
+
+.pagina {
   display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
+  justify-content: center;
+  gap: 20px;
+  opacity: 0;
+  transform: scale(0.95);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
 }
-.galeria1 img {
-  width: 300px;
-  border: 2px solid #ccc;
+
+.pagina.ativa {
+  opacity: 1;
+  transform: scale(1);
+  position: relative;
+}
+
+.pagina img {
+  width: 48%;
+  border-radius: 8px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+#btn-prev, #btn-next {
+  margin-top: 1.2rem;
+  padding: 0.6rem 1.1rem;
+  background-color: #ffcc00;
+  border: none;
+  color: #111;
+  font-weight: bold;
   border-radius: 5px;
+  cursor: pointer;
 }
+
 
    /* CSS */
 .galeria {
@@ -377,20 +411,38 @@
 </section>
 <section class="diario-visual">
   <h2>Diário Visual</h2>
-  <div class="galeria1">
-    <img src="IMG_20250602_180441.jpg" alt="Página 1 do diário">
-    <img src="1.jpg" alt="Página 2 do diário">
-    <img src="2.jpg" alt="Página 3 do diário">
-    <img src="3.jpg" alt="Página 4 do diário">
-    <img src="4.jpg" alt="Página 5 do diário">
-    <img src="5.jpg" alt="Página 6 do diário">
-    <img src="6.jpg" alt="Página 7 do diário">
-    <img src="7.jpg" alt="Página 8 do diário">
-    <img src="8.jpg" alt="Página 9 do diário">
-    <img src="9.jpg" alt="Página 10 do diário">
-    <img src="10.jpg" alt="Página 11 do diário">
+  <div class="livro-container">
+    <div class="pagina ativa">
+      <img src="IMG_20250602_180441.jpg" alt="Página 1">
+      <img src="1.jpg" alt="Página 2">
+    </div>
+    <div class="pagina">
+      <img src="2.jpg" alt="Página 3">
+      <img src="3.jpg" alt="Página 4">
+    </div>
+    <div class="pagina">
+      <img src="4.jpg" alt="Página 5">
+      <img src="5.jpg" alt="Página 6">
+    </div>
+    <div class="pagina">
+      <img src="6.jpg" alt="Página 7">
+      <img src="7.jpg" alt="Página 8">
+    </div>
+    <div class="pagina">
+      <img src="8.jpg" alt="Página 9">
+      <img src="9.jpg" alt="Página 10">
+    </div>
+    <div class="pagina">
+      <img src="10.jpg" alt="Página 11">
+    </div>
+  </div>
+
+  <div class="navegacao-paginas">
+    <button id="btn-prev">←</button>
+    <button id="btn-next">→</button>
   </div>
 </section>
+
 
 
 
@@ -597,6 +649,29 @@
   animar.forEach(el => observador.observe(el));
 </script>
 <script>
+  <script>
+  const paginas = document.querySelectorAll('.pagina');
+  let paginaAtual = 0;
+
+  function mostrarPagina(index) {
+    paginas.forEach((p, i) => {
+      p.classList.toggle('ativa', i === index);
+    });
+  }
+
+  document.getElementById('btn-next').onclick = () => {
+    paginaAtual = (paginaAtual + 1) % paginas.length;
+    mostrarPagina(paginaAtual);
+  };
+
+  document.getElementById('btn-prev').onclick = () => {
+    paginaAtual = (paginaAtual - 1 + paginas.length) % paginas.length;
+    mostrarPagina(paginaAtual);
+  };
+
+  mostrarPagina(paginaAtual);
+</script>
+
   
 </body>
 </html>
