@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Acácio Santos – Ilustrador e Designer</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Open+Sans&display=swap" rel="stylesheet" />
+  
   <style>
     /* ✨ Estilos base e layout */
     * {
@@ -48,6 +49,7 @@
       font-size: 1.2rem;
       color: #aaa;
     }
+    
 
     nav {
       margin-top: 1rem;
@@ -64,7 +66,6 @@
     nav a:hover {
       color: #fff;
     }
-
     section {
       padding: 3rem 2rem;
       max-width: 900px;
@@ -238,6 +239,26 @@
   opacity: 1;
   transform: translateY(0);
 }
+    #idioma-toggle {
+  margin-top: 1rem;
+}
+
+#idioma-toggle button {
+  background-color: #ffcc00;
+  color: #111;
+  border: none;
+  margin: 0 6px;
+  padding: 0.5rem 1.1rem;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+  transition: background 0.3s ease;
+}
+
+#idioma-toggle button:hover {
+  background-color: #fff;
+}
 
   </style>
 </head>
@@ -253,20 +274,40 @@
       <a href="#portfolio">Portfólio</a>
       <a href="#contato">Contato</a>
     </nav>
+     <div id="idioma-toggle">
+      <button onclick="mostrarPT()">PT 🇵🇹</button>
+      <button onclick="mostrarEN()">EN 🇬🇧</button>
+    </div>
   </header>
-  <section id="sobre">
-    <h2>Sobre</h2>
-    <div class="sobre-flex">
-      <img src="IMG_9015.JPEG" alt="Foto de Acácio Santos" class="sobre-foto" />
-      <div class="sobre-textos">
-        <p>Sou ilustrador e designer de 39 anos, nascido sob o signo Leão — e gosto de criar com coragem e presença. Nos últimos anos, mergulhei intensamente na ilustração digital e na pintura em aguarela, buscando texturas, luzes e narrativas visuais que emocionam e conectam.</p>
-        <p>A arte para mim é linguagem emocional. Cada traço, seja com pincel físico ou digital, carrega intenção e sentimento. Meu trabalho equilibra técnica e poesia, sempre com o propósito de comunicar o que palavras não alcançam.</p>
-        <hr style="border: none; border-top: 1px solid #333; margin: 1.3rem 0;">
-        <p><span style="color:#ffcc00"><b>EN</b></span> I’m a 39-year-old illustrator and designer, born under the sign of Leo — and I love creating with courage and presence. Over the past few years, I’ve immersed myself deeply in digital illustration and watercolor painting, exploring textures, light, and visual narratives that evoke emotion and connection.</p>
-        <p>For me, art is an emotional language. Every stroke—whether with a physical brush or a digital tool—carries intention and feeling. My work balances technique and poetry, always driven by the desire to express what words cannot fully convey.</p>
+  <header>
+  <h1>Acácio Santos</h1>
+  <p>Ilustrador & Designer Visual</p>
+  <nav>
+    <a href="#sobre">Sobre</a>
+    <a href="#portfolio">Portfólio</a>
+    <a href="#contato">Contato</a>
+  </nav>
+
+  <div id="idioma-toggle">
+    <button onclick="mostrarPT()">PT 🇵🇹</button>
+    <button onclick="mostrarEN()">EN 🇬🇧</button>
+  </div>
+</header>
+
+<section id="sobre" class="animate">
+  <h2>Sobre</h2>
+  <div class="sobre-flex">
+    <img src="IMG_9015.JPEG" alt="Foto de Acácio Santos" class="sobre-foto" />
+    <div class="sobre-textos">
+      <div class="texto-pt">
+        <p>Sou ilustrador e designer de 39 anos, nascido sob o signo Leão — e gosto de criar com coragem e presença...</p>
+      </div>
+      <div class="texto-en" style="display: none;">
+        <p>I’m a 39-year-old illustrator and designer, born under the sign of Leo — and I love creating with courage and presence...</p>
       </div>
     </div>
-  </section>
+</section>
+
 
   <section id="portfolio">
     <h2>Portfólio</h2>
@@ -428,5 +469,53 @@
       retina_detect: true
     });
   </script>
+    <script>
+  // Alternância de idioma
+  function mostrarPT() {
+    document.querySelector('.texto-pt').style.display = 'block';
+    document.querySelector('.texto-en').style.display = 'none';
+  }
+
+  function mostrarEN() {
+    document.querySelector('.texto-pt').style.display = 'none';
+    document.querySelector('.texto-en').style.display = 'block';
+  }
+
+  // Animação ao rolar
+  const animar = document.querySelectorAll('.animate');
+  const observador = new IntersectionObserver((entradas) => {
+    entradas.forEach((entrada) => {
+      if (entrada.isIntersecting) {
+        entrada.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1 });
+
+  animar.forEach(el => observador.observe(el));
+</script>
+<script>
+  // Alternância de idioma
+  function mostrarPT() {
+    document.querySelector('.texto-pt').style.display = 'block';
+    document.querySelector('.texto-en').style.display = 'none';
+  }
+
+  function mostrarEN() {
+    document.querySelector('.texto-pt').style.display = 'none';
+    document.querySelector('.texto-en').style.display = 'block';
+  }
+
+  // Ativação da animação ao rolar
+  const animar = document.querySelectorAll('.animate');
+  const observador = new IntersectionObserver((entradas) => {
+    entradas.forEach((entrada) => {
+      if (entrada.isIntersecting) {
+        entrada.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1 });
+
+  animar.forEach(el => observador.observe(el));
+</script>
 </body>
 </html>
