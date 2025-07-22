@@ -14,12 +14,16 @@
       box-sizing: border-box;
     }
 
-    body {
-      font-family: 'Open Sans', sans-serif;
-      background-color: #0f0f0f;
-      color: #e5e5e5;
-      scroll-behavior: smooth;
-    }
+   body {
+  font-family: 'Raleway', sans-serif;
+  background-color: #f9f9f9;
+  color: #f7e7ce;
+  scroll-behavior: smooth;
+  line-height: 1.6;
+  letter-spacing: 0.5px;
+  text-rendering: optimizeLegibility;
+}
+
 
     #particles-js {
       position: fixed;
@@ -525,47 +529,49 @@
     &copy; 2025 Acácio Santos. Todos os direitos reservados.
   </footer>
 
-  <!-- Particles.js script -->
-  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-  <script>
-    particlesJS("particles-js", {
-      particles: {
-        number: { value: 60 },
-        color: { value: "#ffcc00" },
-        shape: { type: "circle" },
-        opacity: { value: 0.3 },
-        size: { value: 3 },
-        line_linked: {
-          enable: true,
-          distance: 120,
-          color: "#ffcc00",
-          opacity: 0.3,
-          width: 1
-        },
-        move: {
-          enable: true,
-          speed: 2,
-          direction: "none",
-          random: true,
-          out_mode: "out"
-        }
+ <!-- Particles.js -->
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+<script>
+  particlesJS("particles-js", {
+    particles: {
+      number: { value: 40 }, // menos partículas, visual mais limpo
+      color: { value: "#000000" }, // partículas pretas
+      shape: { type: "circle" },
+      opacity: { value: 0.15 }, // suave e elegante
+      size: { value: 2 }, // tamanho menor para sofisticação
+      line_linked: {
+        enable: true,
+        distance: 100,
+        color: "#444444", // linha cinza escura, mais sutil
+        opacity: 0.2,
+        width: 1
       },
-      interactivity: {
-        detect_on: "canvas",
-        events: {
-          onhover: { enable: true, mode: "grab" },
-          onclick: { enable: false }
-        },
-        modes: {
-          grab: {
-            distance: 150,
-            line_linked: { opacity: 0.5 }
-          }
-        }
+      move: {
+        enable: true,
+        speed: 1.2,
+        direction: "none",
+        random: false,
+        straight: false,
+        out_mode: "out"
+      }
+    },
+    interactivity: {
+      detect_on: "canvas",
+      events: {
+        onhover: { enable: true, mode: "grab" },
+        onclick: { enable: false }
       },
-      retina_detect: true
-    });
-  </script>
+      modes: {
+        grab: {
+          distance: 130,
+          line_linked: { opacity: 0.3 }
+        }
+      }
+    },
+    retina_detect: true
+  });
+</script>
+
     <script>
   // Alternância de idioma
   function mostrarPT() {
