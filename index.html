@@ -558,7 +558,6 @@
 
   animar.forEach(el => observador.observe(el));
 </script>
-<!-- Flipbook Script -->
 <script>
   function ajustarFlipbook() {
     const larguraTela = window.innerWidth;
@@ -568,19 +567,22 @@
 
     $("#flipbook").turn("size", largura, altura);
   }
+</script>
 
+<script>
   $(document).ready(function () {
     $("#flipbook").turn({
       width: 800,
       height: 500,
       autoCenter: true,
-      display: 'double' // 👈 Isso ativa o modo livro
+      display: 'double' // 👍 ativa visualização como livro aberto
     });
 
     ajustarFlipbook();
     $(window).resize(ajustarFlipbook);
   });
 </script>
+
 
 </body>
 </html>
