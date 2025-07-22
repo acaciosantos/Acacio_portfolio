@@ -565,42 +565,47 @@
 </script>
 
   });
- <script>
-    const pages = [
-      { img: '1.jpg', text: 'Texto da página 1' },
-      { img: '2.jpg', text: 'Texto da página 2' },
-      { img: '3.jpg', text: 'Texto da página 3' },
-      { img: '4.jpg', text: 'Texto da página 4' },
-    ];
+<script>
+  const pages = [
+    { img: '1.jpg', text: 'Texto da página 1' },
+    { img: '2.jpg', text: 'Texto da página 2' },
+    { img: '3.jpg', text: 'Texto da página 3' },
+    { img: '4.jpg', text: 'Texto da página 4' }
+  ];
 
-    let currentPage = 0;
+  let currentPage = 0;
 
-    function updatePage() {
-  const pageElement = document.getElementById('page');
-  pageElement.innerHTML = `
-  <img src="${pages[currentPage].img}" alt="Página ${currentPage + 1}">
-  <p>${pages[currentPage].text}</p>
-`;
-}
+  function updatePage() {
+    const pageElement = document.getElementById('page');
+    pageElement.style.opacity = 0;
 
+    setTimeout(() => {
+      pageElement.innerHTML = `
+        <img src="${pages[currentPage].img}" alt="Página ${currentPage + 1}">
+        <p>${pages[currentPage].text}</p>
+      `;
+      pageElement.style.opacity = 1;
+    }, 200);
+  }
 
-    function nextPage() {
-      if (currentPage < pages.length - 1) {
-        currentPage++;
-        updatePage();
-      }
+  function nextPage() {
+    if (currentPage < pages.length - 1) {
+      currentPage++;
+      updatePage();
     }
+  }
 
-    function prevPage() {
-      if (currentPage > 0) {
-        currentPage--;
-        updatePage();
-      }
+  function prevPage() {
+    if (currentPage > 0) {
+      currentPage--;
+      updatePage();
     }
+  }
 
-    // Inicializar página
-    updatePage();
-  </script>
+  // Inicializa a primeira página
+  updatePage();
+</script>
+
 </body>
 </html>
 
