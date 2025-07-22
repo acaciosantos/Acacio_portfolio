@@ -517,9 +517,11 @@
 
   animar.forEach(el => observador.observe(el));
 </script>
+<!-- Flipbook Script -->
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/turn.js@4/turn.min.js"></script>
 <script>
-  <script>
-  document.addEventListener("DOMContentLoaded", function () {
+  $(document).ready(function () {
     $("#flipbook").turn({
       width: 800,
       height: 500,
@@ -527,7 +529,6 @@
     });
   });
 </script>
-
 </body>
 </html>
 
