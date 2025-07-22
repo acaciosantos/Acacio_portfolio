@@ -592,21 +592,13 @@
 </script>
 
 <!-- Bibliotecas necessárias -->
+
+
+
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/turn.js@4/turn.min.js"></script>
 
-
-<!-- Script de inicialização do flipbook -->
 <script>
-  function ajustarFlipbook() {
-    const larguraTela = window.innerWidth;
-    const alturaTela = window.innerHeight;
-    const largura = larguraTela > 1000 ? 800 : larguraTela * 0.9;
-    const altura = alturaTela > 700 ? 500 : alturaTela * 0.6;
-
-    $("#flipbook").turn("size", largura, altura);
-  }
-
   $(document).ready(function () {
     $("#flipbook").turn({
       width: 800,
@@ -614,11 +606,9 @@
       autoCenter: true,
       display: 'double'
     });
-
-    ajustarFlipbook();
-    $(window).resize(ajustarFlipbook);
   });
 </script>
+
 
 </body>
 </html>
