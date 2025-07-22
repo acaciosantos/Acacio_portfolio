@@ -260,22 +260,7 @@
   background-color: #fff;
 }
 
-#flipbook {
-  width: 800px;
-  height: 500px;
-  margin: 3rem auto;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
-  border-radius: 8px;
-  background-color: #1a1a1a;
-}
 
-#flipbook img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  display: block;
-  margin: auto;
-}
 
 
 
@@ -345,14 +330,7 @@
 
       </div>
     </div>
-</section>
-<div id="flipbook">
-  <div><img src="capa.jpg" alt="Capa"></div>
-  <div><img src="1.jpg" alt="Página 1"></div>
-  <div><img src="2.jpg" alt="Página 2"></div>
-  <div><img src="3.jpg" alt="Página 3"></div>
-  <div><img src="4.jpg" alt="Página 4"></div>
-</div>
+
 
 </section>
 
@@ -542,20 +520,7 @@
   animar.forEach(el => observador.observe(el));
 </script>
 
-<!-- Bibliotecas necessárias -->
-<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/turn.js@4/turn.min.js"></script>
 
-<script>
-  $(document).ready(function () {
-    $("#flipbook").turn({
-      width: 800,
-      height: 500,
-      autoCenter: true,
-      display: 'double'
-    });
-  });
-</script>
 
 
 
