@@ -2,141 +2,109 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Acácio Santos – Ilustrador e Designer</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Open+Sans&display=swap" rel="stylesheet" />
+  <title>Acácio Santos – Portfólio</title>
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+    :root {
+      --bg: #0f0f0f;
+      --text: #e5e5e5;
+      --accent: #ffcc00;
+      --card: #222;
     }
 
-    body {
-      font-family: 'Open Sans', sans-serif;
-      background-color: #0f0f0f;
-      color: #e5e5e5;
-      scroll-behavior: smooth;
+    [data-theme="light"] {
+      --bg: #f9f9f9;
+      --text: #111;
+      --accent: #cc8800;
+      --card: #fff;
     }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: sans-serif;
+      background: var(--bg); color: var(--text);
+      transition: all 0.5s ease;
+    }
+
+    header, footer, section { padding: 2rem; text-align: center; }
+    h1 { color: var(--accent); }
+    nav a { margin: 0 1rem; color: var(--accent); text-decoration: none; }
 
     #particles-js {
-      position: fixed;
-      width: 100%;
-      height: 100%;
+      position: fixed; top: 0; left: 0;
+      width: 100%; height: 100%;
       z-index: -1;
-      top: 0;
-      left: 0;
-    }
-
-    header {
-      background-color: rgba(24, 24, 24, 0.9);
-      padding: 2rem;
-      text-align: center;
-      border-bottom: 2px solid #333;
-    }
-
-    header h1 {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 2.7rem;
-      letter-spacing: 1px;
-      color: #ffcc00;
-    }
-
-    header p {
-      margin-top: 0.5rem;
-      font-size: 1.2rem;
-      color: #aaa;
-    }
-
-    nav {
-      margin-top: 1rem;
-    }
-
-    nav a {
-      margin: 0 1rem;
-      color: #ffcc00;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    section {
-      padding: 3rem 2rem;
-      max-width: 900px;
-      margin: auto;
-      position: relative;
-      z-index: 1;
-    }
-
-    h2 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-      color: #ffcc00;
-      font-family: 'Montserrat', sans-serif;
     }
 
     .portfolio-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1rem;
+      display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center;
     }
 
     .portfolio-item {
-      background-color: #222;
-      border-radius: 8px;
-      overflow: hidden;
-      min-height: 250px;
-      transition: transform 0.3s ease, opacity 0.3s ease;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .portfolio-item:hover {
-      transform: scale(1.03);
-      opacity: 0.95;
+      width: 200px; cursor: pointer;
+      background: var(--card);
+      padding: 0.5rem;
+      border-radius: 6px;
     }
 
     .portfolio-item img {
-      width: 100%;
-      height: auto;
-      object-fit: cover;
-      display: block;
+      width: 100%; height: auto; border-radius: 4px;
     }
 
-    @media (max-width: 500px) {
-      section {
-        padding: 1rem 0.5rem;
-      }
-      .portfolio-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    footer {
-      background-color: rgba(24, 24, 24, 0.9);
-      text-align: center;
-      padding: 2rem;
-      font-size: 0.9rem;
-      color: #666;
-      border-top: 2px solid #333;
-      position: relative;
-      z-index: 1;
-    }
-
-    .btn-contato {
-      display: inline-block;
-      margin-top: 1rem;
-      background-color: #ffcc00;
-      color: #111;
-      padding: 0.7rem 1.2rem;
+    #filters button {
+      margin: 0.5rem;
+      padding: 0.5rem 1rem;
+      border: none;
+      background: var(--card);
+      color: var(--text);
+      border: 1px solid var(--accent);
+      cursor: pointer;
       border-radius: 4px;
-      text-decoration: none;
-      font-weight: bold;
     }
+
+    #modal {
+      position: fixed; top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.85);
+      display: none; justify-content: center; align-items: center;
+    }
+
+    .modal-content {
+      background: var(--card); color: var(--text);
+      padding: 1rem; border-radius: 6px; text-align: center;
+      max-width: 400px;
+    }
+
+    #modal img { width: 100%; border-radius: 4px; margin-bottom: 1rem; }
+
+    .btn { display: inline-block; margin: 1rem 0; padding: 0.5rem 1rem;
+      background: var(--accent); color: #000; text-decoration: none;
+      border-radius: 4px;
+    }
+
+    #language-toggle, #theme-toggle {
+      position: fixed; top: 1rem;
+      padding: 0.4rem 0.8rem;
+      border-radius: 4px; cursor: pointer;
+      background: var(--card); color: var(--text); border: none;
+    }
+
+    #theme-toggle { right: 6rem; }
+    #language-toggle { right: 1rem; }
+
+    .highlight-banner {
+      background: var(--card); color: var(--accent);
+      padding: 1rem; margin: 2rem auto; border-left: 6px solid var(--accent);
+      max-width: 500px; border-radius: 4px;
+    }
+
+    footer a { color: var(--accent); margin: 0 0.5rem; text-decoration: none; }
   </style>
 </head>
 <body>
+
   <div id="particles-js"></div>
+  <button id="theme-toggle">Tema</button>
+  <button id="language-toggle">Idioma</button>
 
   <header>
     <h1>Acácio Santos</h1>
@@ -150,105 +118,94 @@
 
   <section id="sobre">
     <h2>Sobre</h2>
-    <p>Sou ilustrador e designer de 39 anos, nascido sob o signo Leão — e gosto de criar com coragem e presença. Nos últimos anos, mergulhei intensamente na ilustração digital e na pintura em aguarela, buscando texturas, luzes e narrativas visuais que emocionam e conectam.</p>
-    <p>A arte para mim é linguagem emocional. Cada traço, seja com pincel físico ou digital, carrega intenção e sentimento. Meu trabalho equilibra técnica e poesia, sempre com o propósito de comunicar o que palavras não alcançam.</p>
-    <p>I’m a 39-year-old illustrator and designer, born under the sign of Leo — and I love creating with courage and presence. Over the past few years, I’ve immersed myself deeply in digital illustration and watercolor painting, exploring textures, light, and visual narratives that evoke emotion and connection.</p>
-    <p>For me, art is an emotional language. Every stroke—whether with a physical brush or a digital tool—carries intention and feeling. My work balances technique and poetry, always driven by the desire to express what words cannot fully convey.</p>
+    <p>Sou ilustrador e designer com 39 anos, signo Leão. Crio com coragem, explorando aguarela e digital para evocar emoção.</p>
+    <p>Art is an emotional language. My work speaks what words cannot express.</p>
   </section>
 
- <section id="portfolio">
-  <h2>Portfólio</h2>
-  <div class="portfolio-grid">
-    <div class="portfolio-item">
-      <img src="IMG_20250619_160556.jpg" alt="Arte 1" />
-    </div>
-    <div class="portfolio-item">
-      <img src="IMG_20250619_192240.jpg" alt="Arte 2" />
-    </div>
-    <div class="portfolio-item">
-      <img src="IMG_20250619_192244.jpg" alt="Arte 3" />
-    </div>
-    <div class="portfolio-item">
-      <img src="IMG_20250602_180226.jpg" alt="Arte 4" />
-    </div>
-     <div class="portfolio-item">
-      <img src="IMG_20250602_180441.jpg" alt="Arte 5" />
-    </div>
-      <div class="portfolio-item">
-      <img src="IMG_1674.JPG" alt="Arte 6" />
-        </div>
-        <div class="portfolio-item">
-      <img src="IMG_1670.JPG" alt="Arte 7" />
-    </div>
-    <div class="portfolio-item">
-      <img src="IMG_1671.JPG" alt="Arte 8" />
-    </div>
-    <div class="portfolio-item">
-      <img src="IMG_1672.JPG" alt="Arte 9" />
-    </div>
-    <div class="portfolio-item">
-      <img src="IMG_1673.JPG" alt="Arte 10" />
-    </div>
-     <div class="portfolio-item">
-      <img src="IMG_1675.JPG" alt="Arte 11" />
-     </div>
+  <div class="highlight-banner">
+    Destaque: Selecionado para Bienal de Arte Contemporânea, 2025 🎨
   </div>
 
+  <section id="portfolio">
+    <h2>Portfólio</h2>
+    <div id="filters">
+      <button data-style="all">Todos</button>
+      <button data-style="digital">Digital</button>
+      <button data-style="aquarela">Aquarela</button>
+    </div>
+    <div class="portfolio-grid">
+      <div class="portfolio-item" data-style="digital" data-title="Retrato Digital" data-technique="Arte Digital" data-image="images/arte1.jpg">
+        <img src="images/arte1.jpg" alt="Digital" />
+      </div>
+      <div class="portfolio-item" data-style="aquarela" data-title="O Voo" data-technique="Aquarela" data-image="images/arte2.jpg">
+        <img src="images/arte2.jpg" alt="Aquarela" />
+      </div>
+    </div>
+  </section>
+
+  <div id="modal">
+    <div class="modal-content">
+      <span id="close-modal" style="cursor:pointer;">✖</span>
+      <img id="modal-img" src="" alt="" />
+      <h3 id="modal-title"></h3>
+      <p id="modal-technique"></p>
+      <a id="download-btn" class="btn" href="#" download>Download</a>
+    </div>
+  </div>
+
+  <section>
+    <h2>Depoimentos</h2>
+    <p>“Transforma emoção em imagem como ninguém.” — Cliente A</p>
+    <p>“Cada traço tem alma. Trabalho impecável.” — Estúdio B</p>
+  </section>
 
   <section id="contato">
     <h2>Contato</h2>
-    <p>Entre em contato para colaborações ou encomendas personalizadas.</p>
     <p>Email: <a href="mailto:ajasantos2@email.com">ajasantos2@email.com</a></p>
-    <p>Instagram: <a href="https://instagram.com/zeca_ilustra" target="_blank">@zeca_ilustra</a></p>
-    <a class="btn-contato" href="mailto:ajasantos2@email.com">Enviar mensagem</a>
+    <p>Instagram: <a href="https://instagram.com/zeca_ilustra">@zeca_ilustra</a></p>
+    <a class="btn" href="mailto:ajasantos2@email.com">Enviar mensagem</a>
   </section>
 
   <footer>
-    &copy; 2025 Acácio Santos. Todos os direitos reservados.
+    <p>&copy; 2025 Acácio Santos</p>
+    <p>
+      <a href="https://linkedin.com">LinkedIn</a> |
+      <a href="https://behance.net">Behance</a>
+    </p>
   </footer>
 
-  <!-- Particles.js script -->
   <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
   <script>
+    // Partículas
     particlesJS("particles-js", {
       particles: {
-        number: { value: 60 },
-        color: { value: "#ffcc00" },
-        shape: { type: "circle" },
-        opacity: { value: 0.3 },
-        size: { value: 3 },
-        line_linked: {
-          enable: true,
-          distance: 120,
-          color: "#ffcc00",
-          opacity: 0.3,
-          width: 1
-        },
-        move: {
-          enable: true,
-          speed: 2,
-          direction: "none",
-          random: true,
-          out_mode: "out"
-        }
-      },
-      interactivity: {
-        detect_on: "canvas",
-        events: {
-          onhover: { enable: true, mode: "grab" },
-          onclick: { enable: false }
-        },
-        modes: {
-          grab: {
-            distance: 150,
-            line_linked: { opacity: 0.5 }
-          }
-        }
-      },
-      retina_detect: true
+        number: { value: 60 }, color: { value: "#ffcc00" },
+        shape: { type: "circle" }, opacity: { value: 0.3 },
+        size: { value: 3 }, line_linked: { enable: true, color: "#ffcc00" },
+        move: { enable: true, speed: 1 }
+      }
     });
-  </script>
-</body>
-</html>
 
+    // Filtros
+    document.querySelectorAll('[data-style]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const style = btn.dataset.style;
+        document.querySelectorAll('.portfolio-item').forEach(item => {
+          item.style.display = (style === 'all' || item.dataset.style === style) ? 'block' : 'none';
+        });
+      });
+    });
 
+    // Modal
+    const modal = document.getElementById('modal');
+    const modalImg = document.getElementById('modal-img');
+    const modalTitle = document.getElementById('modal-title');
+    const modalTechnique = document.getElementById('modal-technique');
+    const downloadBtn = document.getElementById('download-btn');
+
+    document.querySelectorAll('.portfolio-item').forEach(item => {
+      item.addEventListener('click', () => {
+        modalImg.src = item.dataset.image;
+        modalTitle.textContent = item.dataset.title;
+        modalTechnique.textContent = item.dataset.technique;
+        downloadBtn
