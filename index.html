@@ -1,4 +1,4 @@
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8" />
@@ -6,7 +6,6 @@
   <title>Acácio Santos – Ilustrador e Designer</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Open+Sans&display=swap" rel="stylesheet" />
   <style>
-    /* ✨ Estilos base e layout */
     * {
       margin: 0;
       padding: 0;
@@ -39,8 +38,8 @@
     header h1 {
       font-family: 'Montserrat', sans-serif;
       font-size: 2.7rem;
-      color: #ffcc00;
       letter-spacing: 1px;
+      color: #ffcc00;
     }
 
     header p {
@@ -60,7 +59,6 @@
       font-weight: bold;
       transition: color 0.2s;
     }
-
     nav a:hover {
       color: #fff;
     }
@@ -82,7 +80,6 @@
       padding-left: 0.7rem;
     }
 
-    /* 👤 Sobre */
     .sobre-flex {
       display: flex;
       align-items: flex-start;
@@ -96,141 +93,27 @@
       border-radius: 50%;
       object-fit: cover;
       box-shadow: 0 0 10px rgba(0,0,0,0.5);
+      margin-bottom: 1rem;
       flex-shrink: 0;
     }
 
     .sobre-textos {
       flex: 1;
       min-width: 250px;
+      color: #ddd;
       font-size: 1.08rem;
       line-height: 1.7;
-      color: #ddd;
     }
 
     .sobre-textos p {
       margin-bottom: 0.8rem;
     }
 
-    /* 🖼️ Portfólio */
     .portfolio-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 1rem;
       margin-bottom: 2.5rem;
-    }
-
-    .portfolio-item {
-      background-color: #222;
-      border-radius: 8px;
-      overflow: hidden;
-      min-height: 250px;
-      transition: transform 0.3s ease;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .portfolio-item img {
-      width: 100%;
-      height: auto;
-      object-fit: cover;
-      transition: transform 0.4s ease;
-    }
-
-    .portfolio-item:hover img {
-      transform: scale(1.1);
-      cursor: zoom-in;
-    }
-
-    figure {
-      margin: 0;
-      text-align: center;
-    }
-
-    figcaption {
-      margin-top: 0.5rem;
-      font-size: 0.95rem;
-      color: #aaa;
-      font-style: italic;
-    }
-
-    /* 🎨 Manifesto Visual */
-    .manifesto-visual {
-      margin-top: 2rem;
-      padding: 1.3rem 1.2rem;
-      background-color: rgba(24,24,24,0.6);
-      border-left: 5px solid #ffcc00;
-      border-radius: 8px;
-      font-size: 1.08rem;
-      line-height: 1.7;
-      color: #ccc;
-    }
-
-    .manifesto-visual h3 {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 1.3rem;
-      margin-bottom: 1rem;
-      color: #ffcc00;
-    }
-
-    .manifesto-visual em,
-    .manifesto-visual strong {
-      color: #ffe066;
-      font-style: italic;
-    }
-
-    /* 📱 Responsividade */
-    @media (max-width: 500px) {
-      .portfolio-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .portfolio-item img {
-        max-height: 300px;
-        object-fit: contain;
-      }
-
-      .sobre-flex {
-        flex-direction: column;
-        align-items: center;
-      }
-
-      .sobre-foto {
-        margin-bottom: 1rem;
-      }
-    }
-
-    /* 📬 Contato */
-    .btn-contato {
-      display: inline-block;
-      margin-top: 1rem;
-      background-color: #ffcc00;
-      color: #111;
-      padding: 0.7rem 1.2rem;
-      border-radius: 4px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: background 0.2s, color 0.2s;
-    }
-
-    .btn-contato:hover {
-      background-color: #fff;
-      color: #111;
-    }
-
-    /* 📥 Rodapé */
-    footer {
-      background-color: rgba(24, 24, 24, 0.9);
-      text-align: center;
-      padding: 2rem;
-      font-size: 0.95rem;
-      color: #888;
-      border-top: 2px solid #333;
-    }
-    .portfolio-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1rem;
     }
 
     .portfolio-item {
@@ -244,16 +127,43 @@
       justify-content: center;
     }
 
-    .portfolio-item:hover {
-      transform: scale(1.03);
-      opacity: 0.95;
-    }
-
     .portfolio-item img {
       width: 100%;
       height: auto;
       object-fit: cover;
       display: block;
+      transition: transform 0.4s ease;
+    }
+
+    .portfolio-item:hover img {
+      transform: scale(1.1);
+      cursor: zoom-in;
+    }
+
+    .manifesto-visual {
+      margin-top: 2.5rem;
+      font-size: 1.08rem;
+      line-height: 1.7;
+      color: #ccc;
+      background: rgba(24,24,24,0.6);
+      border-left: 5px solid #ffcc00;
+      padding: 1.3rem 1.2rem;
+      border-radius: 8px;
+    }
+
+    .manifesto-visual h3 {
+      color: #ffcc00;
+      margin-bottom: 1rem;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.3rem;
+      border: none;
+      padding: 0;
+    }
+
+    .manifesto-visual em,
+    .manifesto-visual strong {
+      color: #ffe066;
+      font-style: italic;
     }
 
     @media (max-width: 500px) {
@@ -263,14 +173,21 @@
       .portfolio-grid {
         grid-template-columns: 1fr;
       }
+      .sobre-flex {
+        flex-direction: column;
+        align-items: center;
+      }
+      .sobre-foto {
+        margin-bottom: 1rem;
+      }
     }
 
     footer {
       background-color: rgba(24, 24, 24, 0.9);
       text-align: center;
       padding: 2rem;
-      font-size: 0.9rem;
-      color: #666;
+      font-size: 0.95rem;
+      color: #888;
       border-top: 2px solid #333;
       position: relative;
       z-index: 1;
@@ -285,14 +202,16 @@
       border-radius: 4px;
       text-decoration: none;
       font-weight: bold;
+      transition: background 0.2s, color 0.2s;
+    }
+    .btn-contato:hover {
+      background: #fff;
+      color: #111;
     }
   </style>
 </head>
 <body>
-
   <div id="particles-js"></div>
-
-
   <header>
     <h1>Acácio Santos</h1>
     <p>Ilustrador & Designer Visual</p>
@@ -300,216 +219,59 @@
       <a href="#sobre">Sobre</a>
       <a href="#portfolio">Portfólio</a>
       <a href="#contato">Contato</a>
-      <a href="#diario-visual">Diário Gráfico</a>
     </nav>
-    <div id="idioma-toggle">
-      <button onclick="mostrarPT()">PT 🇵🇹</button>
-      <button onclick="mostrarEN()">EN 🇬🇧</button>
-    </div>
   </header>
 
-
-</body>
-</html>
-
-
-<section id="sobre" class="animate">
-  <h2>About</h2>
-  <div class="sobre-flex">
-    <img src="IMG_9015.JPEG" alt="Photo of Acácio Santos" class="sobre-foto" />
-    
-    <div class="sobre-textos">
-      
-      <!-- Portuguese Bio -->
-      <div class="texto texto-pt">
+  <section id="sobre">
+    <h2>Sobre</h2>
+    <div class="sobre-flex">
+      <img src="IMG_9015.JPEG" alt="Foto de Acácio Santos" class="sobre-foto" />
+      <div class="sobre-textos">
         <p>Sou ilustrador e designer de 39 anos, nascido sob o signo Leão — e gosto de criar com coragem e presença. Nos últimos anos, mergulhei intensamente na ilustração digital e na pintura em aguarela, buscando texturas, luzes e narrativas visuais que emocionam e conectam.</p>
         <p>A arte para mim é linguagem emocional. Cada traço, seja com pincel físico ou digital, carrega intenção e sentimento. Meu trabalho equilibra técnica e poesia, sempre com o propósito de comunicar o que palavras não alcançam.</p>
-        <p><em>“Eu não ilustro personagens. Eu ilustro emoções, atmosferas, momentos não ditos.”</em></p>
-        <p>Em cada criação, carrego a presença emocional e ousada que me define.</p>
-        <p>Trabalho entre o digital e o orgânico — onde os pixels encontram os pigmentos, e onde a luz não apenas ilumina, mas revela.</p>
-        <p>Minha linguagem visual é feita de textura e silêncio, contraste e sutileza.</p>
-        <p>Com a aquarela, deixo o pigmento fluir como pensamentos vagantes; e com a ilustração digital, controlo cada milímetro com intenção e precisão.</p>
-      </div>
-
-      <!-- English Bio -->
-      <div class="texto texto-en" style="display: none;">
-        <p>I’m a 39-year-old illustrator and designer, born under the sign of Leo — and I love creating with courage and presence. Over the past few years, I’ve immersed myself deeply in digital illustration and watercolor painting, exploring textures, light, and visual narratives that evoke emotion and connection.</p>
+        <hr style="border: none; border-top: 1px solid #333; margin: 1.3rem 0;">
+        <p><span style="color:#ffcc00"><b>EN</b></span> I’m a 39-year-old illustrator and designer, born under the sign of Leo — and I love creating with courage and presence. Over the past few years, I’ve immersed myself deeply in digital illustration and watercolor painting, exploring textures, light, and visual narratives that evoke emotion and connection.</p>
         <p>For me, art is an emotional language. Every stroke—whether with a physical brush or a digital tool—carries intention and feeling. My work balances technique and poetry, always driven by the desire to express what words cannot fully convey.</p>
-        <p><em>“I don’t illustrate characters. I illustrate emotions, atmospheres, unspoken moments.”</em></p>
-        <p>In every creation, I carry the bold, emotional presence that defines me.</p>
-        <p>I work between the digital and the organic — where pixels meet pigments, and where light doesn’t just illuminate, it reveals.</p>
-        <p>My visual language is made of texture and silence, contrast and subtlety.</p>
-        <p>Through watercolor, I let the pigment flow like wandering thoughts; and through digital illustration, I control every millimeter with intention and precision.</p>
       </div>
-
     </div>
-  </div>
-</section>
-<section class="diario-visual">
-  <h2>Diário Visual</h2>
-  <div class="livro-container">
-    <div class="pagina ativa">
-      <img src="IMG_20250602_180441.jpg" alt="Página 1">
-      <img src="1.jpg" alt="Página 2">
-    </div>
-    <div class="pagina">
-      <img src="2.jpg" alt="Página 3">
-      <img src="3.jpg" alt="Página 4">
-    </div>
-    <div class="pagina">
-      <img src="4.jpg" alt="Página 5">
-      <img src="5.jpg" alt="Página 6">
-    </div>
-    <div class="pagina">
-      <img src="6.jpg" alt="Página 7">
-      <img src="7.jpg" alt="Página 8">
-    </div>
-    <div class="pagina">
-      <img src="8.jpg" alt="Página 9">
-      <img src="9.jpg" alt="Página 10">
-    </div>
-    <div class="pagina">
-      <img src="10.jpg" alt="Página 11">
-    </div>
-  </div>
-
-  <div class="navegacao-paginas">
-    <button id="btn-prev">←</button>
-    <button id="btn-next">→</button>
-  </div>
-</section>
-
-
-
+  </section>
 
   <section id="portfolio">
     <h2>Portfólio</h2>
     <div class="portfolio-grid">
-  <div class="portfolio-item">
-    <figure>
-      <img src="IMG_20250619_160556.jpg" alt="Arte 1" />
-      <figcaption>“Reflexo de saudade em tons suaves.”</figcaption>
-    </figure>
-  </div>
-  <div class="portfolio-item">
-    <figure>
-      <img src="IMG_20250619_192240.jpg" alt="Arte 2" />
-      <figcaption>“Reflexo de saudade em tons suaves.”</figcaption>
-    </figure>
-  </div>
-  <div class="portfolio-item">
-    <figure>
-      <img src="IMG_20250619_192244.jpg" alt="Arte 3" />
-      <figcaption>“Reflexo de saudade em tons suaves.”</figcaption>
-    </figure>
-  </div>
-  <div class="portfolio-item">
-    <figure>
-      <img src="IMG_20250602_180226.jpg" alt="Arte 4" />
-      <figcaption>“Expressão espontânea em pigmentos vivos.”</figcaption>
-    </figure>
-  </div>
-  <div class="portfolio-item">
-    <figure>
-      <img src="IMG_20250602_180441.jpg" alt="Arte 5" />
-      <figcaption>“Fragmentos visuais de um instante poético.”</figcaption>
-    </figure>
-  </div>
-  <div class="portfolio-item">
-    <figure>
-      <img src="IMG_1674.JPG" alt="Arte 6" />
-      <figcaption>“Personagem em pausa, mergulhado na introspecção.”</figcaption>
-    </figure>
-  </div>
-  <div class="portfolio-item">
-    <figure>
-      <img src="IMG_1670.JPG" alt="Arte 7" />
-      <figcaption>“Contornos que dançam entre o real e o sensível.”</figcaption>
-    </figure>
-  </div>
-  <div class="portfolio-item">
-    <figure>
-      <img src="IMG_1671.JPG" alt="Arte 8" />
-      <figcaption>“Cenário emocional pintado em aquarela.”</figcaption>
-    </figure>
-  </div>
-  <div class="portfolio-item">
-    <figure>
-      <img src="IMG_1672.JPG" alt="Arte 9" />
-      <figcaption>“Intensidade e leveza em justaposição.”</figcaption>
-    </figure>
-  </div>
-  <div class="portfolio-item">
-    <figure>
-      <img src="IMG_1673.JPG" alt="Arte 10" />
-      <figcaption>“Olhar perdido entre cor e textura.”</figcaption>
-    </figure>
-  </div>
-  <div class="portfolio-item">
-    <figure>
-      <img src="IMG_1675.JPG" alt="Arte 11" />
-      <figcaption>“Silêncio visual com presença energética.”</figcaption>
-    </figure>
- </div>
- </div>
-      
-     <section id="manifesto">
-    <h2>MANIFESTOS</h2>
-     <div class="Manifestos-textos">
-        <p><em>“Eu não ilustro personagens. Ilustro emoções, atmosferas, instantes não ditos.”</em></p>
-      <p>Sou Acácio Santos, ilustrador e designer de alma intensa. levo em cada criação a presença firme, ousada e emocional que me define. Trabalho entre o digital e o orgânico — onde pixels se encontram com pigmentos, e onde a luz não apenas ilumina, mas revela.</p>
-      <p>Minha linguagem visual é feita de textura e silêncio, contraste e leveza. Através da aguarela, deixo a tinta correr como pensamentos soltos; e com a ilustração digital, controlo cada milímetro com intenção e detalhe*
-        <hr style="border: none; border-top: 1px solid #333; margin: 1.3rem 0;">
-        
-      </div>
+      <div class="portfolio-item"><img src="IMG_20250619_160556.jpg" alt="Arte 1" /></div>
+      <div class="portfolio-item"><img src="IMG_20250619_192240.jpg" alt="Arte 2" /></div>
+      <div class="portfolio-item"><img src="IMG_20250619_192244.jpg" alt="Arte 3" /></div>
+      <div class="portfolio-item"><img src="IMG_20250602_180226.jpg" alt="Arte 4" /></div>
+      <div class="portfolio-item"><img src="IMG_20250602_180441.jpg" alt="Arte 5" /></div>
+      <div class="portfolio-item"><img src="IMG_1674.JPG" alt="Arte 6" /></div>
+      <div class="portfolio-item"><img src="IMG_1670.JPG" alt="Arte 7" /></div>
+      <div class="portfolio-item"><img src="IMG_1671.JPG" alt="Arte 8" /></div>
+      <div class="portfolio-item"><img src="IMG_1672.JPG" alt="Arte 9" /></div>
+      <div class="portfolio-item"><img src="IMG_1673.JPG" alt="Arte 10" /></div>
+      <div class="portfolio-item"><img src="IMG_1675.JPG" alt="Arte 11" /></div>
+    </div>
+    <div class="manifesto-visual">
+      <h3>Manifesto Visual</h3>
+      <p><em>“Eu não ilustro personagens. Ilustro emoções, atmosferas, instantes não ditos.”</em></p>
+      <p>Sou Acácio Santos, ilustrador e designer de alma intensa. Nascido sob o signo de Leão, levo em cada criação a presença firme, ousada e emocional que me define. Trabalho entre o digital e o orgânico — onde pixels se encontram com pigmentos, e onde a luz não apenas ilumina, mas revela.</p>
+      <p>Minha linguagem visual é feita de textura e silêncio, contraste e leveza. Através da aguarela, deixo a tinta correr como pensamentos soltos; e com a ilustração digital, controlo cada milímetro com intenção e detalhe.</p>
+      <p>Cada projeto é uma busca: pelo instante que toca, pela história que conecta, pela estética que permanece.</p>
+      <p><strong><em>“A arte é onde a emoção encontra forma. E eu crio formas que fazem o silêncio falar.”</em></strong></p>
     </div>
   </section>
-   
-    <div id="frase-aleatoria" style="margin-top: 2rem; font-style: italic; color: #ffe066;"></div>
 
-<script>
-  const frases = [
-    "A arte é o silêncio que sabe falar.",
-    "Cada traço é uma memória em construção.",
-    "Criar é deixar o invisível ganhar forma.",
-    "O digital é o meu pincel moderno.",
-    "As cores também têm saudade.",
-    "Aguarela é o pensamento quando decide fluir."
-  ];
-
-  function atualizarFrase() {
-    const fraseAleatoria = frases[Math.floor(Math.random() * frases.length)];
-    document.getElementById("frase-aleatoria").textContent = fraseAleatoria;
-  }
-
-  // Atualiza na carga inicial
-  atualizarFrase();
-
-  // Atualiza a cada 2 minutos (120.000 milissegundos)
-  setInterval(atualizarFrase, 120000);
-</script>
- <!-- HTML -->
-<section id="galeria" class="galeria">
-  <h2>Galeria</h2>
-  <div class="galeria-grid">
-    <img src="IMG_20250722_154725.jpg" alt="Ilustração 1" onclick="abrirModal(this.src)" />
-    <img src="IMG_20250722_154835.jpg" alt="Ilustração 2" onclick="abrirModal(this.src)" />
-    <img src="IMG_20250722_155133.jpg" alt="Ilustração 3" onclick="abrirModal(this.src)" />
-    <img src="arte1.jpg" alt="Ilustração 4" onclick="abrirModal(this.src)" />
-  </div>
-
-  <!-- Modal -->
-  <div id="modal" class="modal" onclick="fecharModal()">
-    <img id="modal-imagem" src="" alt="Imagem em destaque" />
-  </div>
-</section>
-
-    
-<section id="contato">
+  <section id="contato">
     <h2>Contato</h2>
     <p>Entre em contato para colaborações ou encomendas personalizadas.</p>
-    <p>Email: <a href="mailto:ajasantos2@email.com">ajasantos2@email.com</a></p>
-    <p>Instagram: <a href="https://instagram.com/zeca_ilustra" target="_blank">@zeca_ilustra</a></p>
+    <p>
+      <strong>Email:</strong>
+      <a href="mailto:ajasantos2@email.com" style="color:#ffcc00;">ajasantos2@email.com</a>
+    </p>
+    <p>
+      <strong>Instagram:</strong>
+      <a href="https://instagram.com/zeca_ilustra" target="_blank" style="color:#ffcc00;">@zeca_ilustra</a>
+    </p>
     <a class="btn-contato" href="mailto:ajasantos2@email.com">Enviar mensagem</a>
   </section>
 
@@ -517,96 +279,48 @@
     &copy; 2025 Acácio Santos. Todos os direitos reservados.
   </footer>
 
- <!-- Particles.js -->
-<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-<script>
-  particlesJS("particles-js", {
-    particles: {
-      number: { value: 40 }, // menos partículas, visual mais limpo
-      color: { value: "#000000" }, // partículas pretas
-      shape: { type: "circle" },
-      opacity: { value: 0.15 }, // suave e elegante
-      size: { value: 2 }, // tamanho menor para sofisticação
-      line_linked: {
-        enable: true,
-        distance: 100,
-        color: "#444444", // linha cinza escura, mais sutil
-        opacity: 0.2,
-        width: 1
-      },
-      move: {
-        enable: true,
-        speed: 1.2,
-        direction: "none",
-        random: false,
-        straight: false,
-        out_mode: "out"
-      }
-    },
-    interactivity: {
-      detect_on: "canvas",
-      events: {
-        onhover: { enable: true, mode: "grab" },
-        onclick: { enable: false }
-      },
-      modes: {
-        grab: {
-          distance: 130,
-          line_linked: { opacity: 0.3 }
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <script>
+    particlesJS("particles-js", {
+      particles: {
+        number: { value: 60 },
+        color: { value: "#ffcc00" },
+        shape: { type: "circle" },
+        opacity: { value: 0.3 },
+        size: { value: 3 },
+        line_linked: {
+          enable: true,
+          distance: 120,
+          color: "#ffcc00",
+          opacity: 0.3,
+          width: 1
+        },
+        move: {
+          enable: true,
+          speed: 2,
+          direction: "none",
+          random: true,
+          out_mode: "out"
         }
-      }
-    },
-    retina_detect: true
-  });
-</script>
-
-    <script>
-  // Alternância de idioma
-  function mostrarPT() {
-    document.querySelector('.texto-pt').style.display = 'block';
-    document.querySelector('.texto-en').style.display = 'none';
-  }
-
-  function mostrarEN() {
-    document.querySelector('.texto-pt').style.display = 'none';
-    document.querySelector('.texto-en').style.display = 'block';
-  }
-
-  // Animação ao rolar
-  const animar = document.querySelectorAll('.animate');
-  const observador = new IntersectionObserver((entradas) => {
-    entradas.forEach((entrada) => {
-      if (entrada.isIntersecting) {
-        entrada.target.classList.add('visible');
-      }
+      },
+      interactivity: {
+        detect_on: "canvas",
+        events: {
+          onhover: { enable: true, mode: "grab" },
+          onclick: { enable: false }
+        },
+        modes: {
+          grab: {
+            distance: 150,
+            line_linked: { opacity: 0.5 }
+          }
+        }
+      },
+      retina_detect: true
     });
-  }, { threshold: 0.1 });
-
-  animar.forEach(el => observador.observe(el));
-</script>
-<script>
-  
-  const paginas = document.querySelectorAll('.pagina');
-  let paginaAtual = 0;
-
-  function mostrarPagina(index) {
-    paginas.forEach((p, i) => {
-      p.classList.toggle('ativa', i === index);
-    });
-  }
-
-  document.getElementById('btn-next').onclick = () => {
-    paginaAtual = (paginaAtual + 1) % paginas.length;
-    mostrarPagina(paginaAtual);
-  };
-
-  document.getElementById('btn-prev').onclick = () => {
-    paginaAtual = (paginaAtual - 1 + paginas.length) % paginas.length;
-    mostrarPagina(paginaAtual);
-  };
-
-  mostrarPagina(paginaAtual);
-</script>
+  </script>
+</body>
+</html>
 
   
 </body>
