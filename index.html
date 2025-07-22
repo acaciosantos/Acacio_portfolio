@@ -260,12 +260,6 @@
   background-color: #fff;
 }
 
-
-
-
-
-
-
   </style>
 </head>
 <body>
@@ -279,12 +273,10 @@
       <a href="#sobre">Sobre</a>
       <a href="#portfolio">Portfólio</a>
       <a href="#contato">Contato</a>
-      <a href="#diario-visual">Diário Gráfico</a>
     </nav>
      <div id="idioma-toggle">
       <button onclick="mostrarPT()">PT 🇵🇹</button>
       <button onclick="mostrarEN()">EN 🇬🇧</button>
-       
     </div>
   </header>
  </header>
@@ -330,9 +322,15 @@
 
       </div>
     </div>
-
-
 </section>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/turn.js@4/turn.min.css">
+<script src="https://cdn.jsdelivr.net/npm/turn.js@4/turn.min.js"></script>
+<div id="flipbook">
+  <div><img src="1.jpg" alt="Página 1"></div>
+  <div><img src="2.jpg" alt="Página 2"></div>
+  <div><img src="3.jpg" alt="Página 3"></div>
+  <!-- adicione quantas páginas quiser -->
+</div>
 
 
   <section id="portfolio">
@@ -519,10 +517,29 @@
 
   animar.forEach(el => observador.observe(el));
 </script>
+<!-- Flipbook Script -->
+<script>
+  function ajustarFlipbook() {
+    const larguraTela = window.innerWidth;
+    const alturaTela = window.innerHeight;
+    const largura = larguraTela > 1000 ? 800 : larguraTela * 0.9;
+    const altura = alturaTela > 700 ? 500 : alturaTela * 0.6;
 
+    $("#flipbook").turn("size", largura, altura);
+  }
 
+  $(document).ready(function () {
+    $("#flipbook").turn({
+      width: 800,
+      height: 500,
+      autoCenter: true,
+      display: window.innerWidth < 768 ? 'single' : 'double'
+    });
 
-
+    ajustarFlipbook();
+    $(window).resize(ajustarFlipbook);
+  });
+</script>
 
 </body>
 </html>
