@@ -494,28 +494,6 @@
   animar.forEach(el => observador.observe(el));
 </script>
 <script>
-  // Alternância de idioma
-  function mostrarPT() {
-    document.querySelector('.texto-pt').style.display = 'block';
-    document.querySelector('.texto-en').style.display = 'none';
-  }
-
-  function mostrarEN() {
-    document.querySelector('.texto-pt').style.display = 'none';
-    document.querySelector('.texto-en').style.display = 'block';
-  }
-
-  // Ativação da animação ao rolar
-  const animar = document.querySelectorAll('.animate');
-  const observador = new IntersectionObserver((entradas) => {
-    entradas.forEach((entrada) => {
-      if (entrada.isIntersecting) {
-        entrada.target.classList.add('visible');
-      }
-    });
-  }, { threshold: 0.1 });
-
-  animar.forEach(el => observador.observe(el));
-</script>
+  
 </body>
 </html>
