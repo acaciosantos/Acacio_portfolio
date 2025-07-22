@@ -15,8 +15,8 @@
 
     body {
       font-family: 'Raleway', sans-serif;
-      background-color: #f9f9f9;
-      color: #000000;
+      background-color: #000000; /* fundo preto */
+      color: #ffffff; /* texto branco */
       scroll-behavior: smooth;
       line-height: 1.6;
       letter-spacing: 0.5px;
@@ -33,7 +33,7 @@
     }
 
     header {
-      background-color: rgba(24, 24, 24, 0.9);
+      background-color: rgba(255, 255, 255, 0.05);
       padding: 2rem;
       text-align: center;
       border-bottom: 2px solid #333;
@@ -42,14 +42,14 @@
     header h1 {
       font-family: 'Montserrat', sans-serif;
       font-size: 2.7rem;
-      color: #000000;
+      color: #ffffff;
       letter-spacing: 1px;
     }
 
     header p {
       margin-top: 0.5rem;
       font-size: 1.2rem;
-      color: #000000;
+      color: #cccccc;
     }
 
     nav {
@@ -58,14 +58,14 @@
 
     nav a {
       margin: 0 1rem;
-      color: #000000;
+      color: #ffffff;
       text-decoration: none;
       font-weight: bold;
-      transition: color 0.2s;
+      transition: color 0.2s ease;
     }
 
     nav a:hover {
-      color: #333333;
+      color: #aaaaaa;
     }
 
     section {
@@ -79,48 +79,48 @@
     h2 {
       font-size: 2rem;
       margin-bottom: 1.2rem;
-      color: #000000;
+      color: #ffffff;
       font-family: 'Montserrat', sans-serif;
-      border-left: 5px solid #000000;
+      border-left: 5px solid #ffffff;
       padding-left: 0.7rem;
     }
 
     .manifesto-visual {
       margin-top: 2rem;
       padding: 1.3rem 1.2rem;
-      background-color: rgba(24,24,24,0.6);
-      border-left: 5px solid #000000;
+      background-color: rgba(255,255,255,0.05);
+      border-left: 5px solid #ffffff;
       border-radius: 8px;
       font-size: 1.08rem;
       line-height: 1.7;
-      color: #ccc;
+      color: #dddddd;
     }
 
     .manifesto-visual h3,
     .manifesto-visual em,
     .manifesto-visual strong {
-      color: #000000;
+      color: #ffffff;
       font-style: italic;
     }
 
     figcaption,
     .sobre-textos,
     footer {
-      color: #000000;
+      color: #cccccc;
     }
 
     .btn-contato,
     #btn-prev,
     #btn-next,
     #idioma-toggle button {
-      background-color: #000000;
-      color: #ffffff;
+      background-color: #ffffff;
+      color: #000000;
       font-weight: bold;
       border: none;
       border-radius: 4px;
       padding: 0.7rem 1.2rem;
       cursor: pointer;
-      transition: background 0.2s ease;
+      transition: background 0.2s ease, color 0.2s ease;
       font-family: 'Montserrat', sans-serif;
     }
 
@@ -128,7 +128,7 @@
     #btn-prev:hover,
     #btn-next:hover,
     #idioma-toggle button:hover {
-      background-color: #333333;
+      background-color: #cccccc;
     }
 
     .livro-container {
@@ -161,20 +161,20 @@
     .pagina img {
       width: 48%;
       border-radius: 8px;
-      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+      box-shadow: 0 8px 16px rgba(255,255,255,0.2);
     }
 
     .portfolio-item {
-      background-color: #222;
+      background-color: #111111;
     }
 
     .galeria-grid img:hover {
       transform: scale(1.05);
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 8px 20px rgba(255, 255, 255, 0.1);
     }
 
     footer {
-      background-color: rgba(24, 24, 24, 0.9);
+      background-color: rgba(255, 255, 255, 0.05);
       text-align: center;
       padding: 2rem;
       border-top: 2px solid #333;
@@ -199,6 +199,10 @@
       <button onclick="mostrarEN()">EN 🇬🇧</button>
     </div>
   </header>
+
+</body>
+</html>
+
 
 <section id="sobre" class="animate">
   <h2>About</h2>
