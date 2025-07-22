@@ -259,6 +259,31 @@
 #idioma-toggle button:hover {
   background-color: #fff;
 }
+  .book-gallery {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.book-page {
+  width: 400px;
+  height: 600px;
+  padding: 20px;
+  border: 2px solid #333;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  background: #fff;
+  margin: 0 20px;
+  text-align: center;
+}
+
+.nav-btn {
+  background-color: #f4f4f4;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 18px;
+}
+  
 
   </style>
 </head>
@@ -322,15 +347,23 @@
 
       </div>
     </div>
-</section>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/turn.js@4/turn.min.css">
-<script src="https://cdn.jsdelivr.net/npm/turn.js@4/turn.min.js"></script>
-<div id="flipbook">
-  <div><img src="1.jpg" alt="Página 1"></div>
-  <div><img src="2.jpg" alt="Página 2"></div>
-  <div><img src="3.jpg" alt="Página 3"></div>
-  <!-- adicione quantas páginas quiser -->
+<div class="book-gallery">
+  <button onclick="prevPage()" class="nav-btn">⟵ Anterior</button>
+  
+  <div id="page" class="book-page">
+    <img src="1.jpg" alt="Página 1">
+    <p>Texto da página 1</p>
+     <img src="2.jpg" alt="Página 2">
+    <p>Texto da página 1</p>
+     <img src="3.jpg" alt="Página 3">
+    <p>Texto da página 1</p>
+     <img src="4.jpg" alt="Página 4">
+    <p>Texto da página 1</p>
+  </div>
+  
+  <button onclick="nextPage()" class="nav-btn">Próximo ⟶</button>
 </div>
+
 
 
   <section id="portfolio">
@@ -539,11 +572,43 @@
     ajustarFlipbook();
     $(window).resize(ajustarFlipbook);
   });
-</script>
+ <script>
+    const pages = [
+      { img: '1.jpg', text: 'Texto da página 1' },
+      { img: '2.jpg', text: 'Texto da página 2' },
+      { img: '3.jpg', text: 'Texto da página 3' },
+      { img: '4.jpg', text: 'Texto da página 4' },
+    ];
 
+    let currentPage = 0;
+
+    function updatePage() {
+      const pageElement = document.getElementById('page');
+      pageElement.innerHTML = `
+        <img src="${pages[currentPage].img}" alt="Página ${currentPage + 1}">
+        <p>${pages[currentPage].text}</p>
+      `;
+    }
+
+    function nextPage() {
+      if (currentPage < pages.length - 1) {
+        currentPage++;
+        updatePage();
+      }
+    }
+
+    function prevPage() {
+      if (currentPage > 0) {
+        currentPage--;
+        updatePage();
+      }
+    }
+
+    // Inicializar página
+    updatePage();
+  </script>
 </body>
 </html>
-
 
 
   
