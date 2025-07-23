@@ -87,6 +87,26 @@
   opacity: 1;
   transform: translateY(0);
 }
+    .filtro-portfolio {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.filtro-portfolio button {
+  padding: 10px 20px;
+  margin: 5px;
+  background-color: #222;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.filtro-portfolio button:hover {
+  background-color: #444;
+}
+
 
     .behance-link {
       display: block;
@@ -386,6 +406,49 @@ body {
 
   </div>
 </section>
+  <!-- Botões de filtro -->
+<div class="filtro-portfolio">
+  <button data-filter="todos">Todos</button>
+  <button data-filter="digital">Ilustração Digital</button>
+  <button data-filter="aguarela">Aguarela</button>
+  <button data-filter="abstrato">Abstrato</button>
+</div>
+
+<!-- Galeria -->
+<<div class="portfolio-item" data-category="digital">
+  <figure>
+    <a href="IMG_1670.JPG" data-lightbox="portfolio" data-title="Obra digital 1">
+      <img src="IMG_1670.JPG" alt="Obra digital 1" />
+    </a>
+    <a href="IMG_1671.JPG" data-lightbox="portfolio" data-title="Obra digital 2">
+      <img src="IMG_1671.JPG" alt="Obra digital 2" />
+    </a>
+    <a href="IMG_1672.JPG" data-lightbox="portfolio" data-title="Obra digital 3">
+      <img src="IMG_1672.JPG" alt="Obra digital 3" />
+    </a>
+    <a href="IMG_1673.JPG" data-lightbox="portfolio" data-title="Obra digital 4">
+      <img src="IMG_1673.JPG" alt="Obra digital 4" />
+    </a>
+      <a href="IMG_1674.JPG" data-lightbox="portfolio" data-title="Obra digital 5">
+      <img src="IMG_1674.JPG" alt="Obra digital 5" />
+    </a>
+    <figcaption>Ilustrações digitais com traço emocional.</figcaption>
+  </figure>
+</div>
+
+
+  <div class="portfolio-item" data-category="aguarela">
+    <figure>
+      <a href="aguarela1.jpg" data-lightbox="portfolio">
+        <img src="aguarela1.jpg" alt="Obra em aguarela" />
+      </a>
+      <figcaption>Estudo em aguarela sobre fragilidade.</figcaption>
+    </figure>
+  </div>
+
+  <!-- Repete com outras categorias -->
+</div>
+
 
 
 <section id="behance">
@@ -449,6 +512,26 @@ body {
     });
   });
 </script>
+  <script>
+  const botoesFiltro = document.querySelectorAll('[data-filter]');
+  const obras = document.querySelectorAll('.portfolio-item');
+
+  botoesFiltro.forEach(botao => {
+    botao.addEventListener('click', () => {
+      const filtro = botao.getAttribute('data-filter');
+
+      obras.forEach(obra => {
+        const categoria = obra.getAttribute('data-category');
+        if (filtro === 'todos' || categoria === filtro) {
+          obra.style.display = 'block';
+        } else {
+          obra.style.display = 'none';
+        }
+      });
+    });
+  });
+</script>
+
 <footer id="contactos">
   <p>&copy; 2025 Acácio Santos — Todos os direitos reservados</p>
   <div class="contact-footer">
