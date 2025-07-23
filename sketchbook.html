@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt">
 <head>
   <meta charset="UTF-8">
@@ -26,11 +27,43 @@
       margin: 0 auto 40px;
     }
 
+    .manifesto, .manifesto1 {
+      font-family: 'Courier New', monospace;
+      margin: 40px auto;
+      padding: 30px;
+      max-width: 700px;
+      background-color: rgba(255,255,255,0.05);
+      color: #f5f5f5;
+      box-shadow: 0 0 20px rgba(255,255,255,0.1);
+      border-radius: 8px;
+      text-align: center;
+    }
+
+    .manifesto1 {
+      border-left: 5px solid crimson;
+      box-shadow: 0 0 20px rgba(255,0,0,0.2);
+    }
+
+    .manifesto h2, .manifesto1 h2 {
+      font-size: 24px;
+      margin-bottom: 15px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: crimson;
+    }
+
+    .manifesto p, .manifesto1 p {
+      font-size: 16px;
+      line-height: 1.8;
+      white-space: pre-line;
+    }
+
     .sketch-grid {
       display: flex;
       flex-wrap: wrap;
       gap: 30px;
       justify-content: center;
+      margin-top: 60px;
     }
 
     .sketch-grid img {
@@ -44,97 +77,77 @@
     .sketch-grid img:hover {
       transform: scale(1.05);
     }
-    .manifesto {
-  font-family: 'Courier New', monospace;
-  max-width: 600px;
-  margin: 40px auto;
-  color: #f5f5f5;
-  text-align: center;
-  background: rgba(255, 255, 255, 0.05);
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 0 20px rgba(255,255,255,0.1);
-}
-.manifesto h2 {
-  font-size: 24px;
-  margin-bottom: 15px;
-  letter-spacing: 2px;
-}
-.manifesto p {
-  font-size: 16px;
-  line-height: 1.6;
-  white-space: pre-line;
-}
 
-    .manifesto1 {
-  background-color: rgba(255,255,255,0.05);
-  color: #f5f5f5;
-  font-family: 'Courier New', monospace;
-  padding: 30px;
-  max-width: 700px;
-  margin: 50px auto;
-  border-left: 5px solid crimson;
-  box-shadow: 0 0 20px rgba(255,0,0,0.2);
-}
-.manifesto1 h2 {
-  font-size: 26px;
-  margin-bottom: 15px;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  color: crimson;
-}
-.manifesto1 p {
-  font-size: 16px;
-  line-height: 1.8;
-  white-space: pre-line;
-}
+    .return-button {
+      display: block;
+      text-align: center;
+      margin: 60px auto 0;
+    }
 
+    .return-button button {
+      padding: 12px 24px;
+      font-family: 'Courier New';
+      font-size: 16px;
+      background: crimson;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
 
+    .return-button button:hover {
+      background: #a10000;
+    }
   </style>
-  
 </head>
 <body class="sketchbook-secreto">
+
   <section>
     <h1>Sketchbook Secreto</h1>
     <p class="intro-sketch">Fragmentos em bruto, ensaios inacabados, falhas bonitas — esta é a parte que raramente se mostra.</p>
-
-    <div class="sketch-grid">
-      <img src="1.jpg" alt="Esboço pessoal">
-      <img src="2.jpg" alt="Experimentação de cor">
-      <img src="3.jpg" alt="Fragmento emocional">
-    </div>
   </section>
+
   <section class="manifesto">
-  <h2>Manifesto dos Fragmentos</h2>
-  <p>
-    Não são obras acabadas. São respirações.<br>
-    Esboços que falam antes de serem entendidos.<br>
-    Cada falha é uma fresta. Cada risco, um grito silencioso.<br>
-    Este diário não busca ordem — ele confessa.<br><br>
-    É aqui que a arte se desarma. Onde o caos é bem-vindo.<br>
-    Se não fizer sentido... é porque ainda está vivo.
-  </p>
-</section>
-<section class="manifesto1">
-  <h2>Manifesto dos Rascunhos Indomáveis</h2>
-  <p>
-    Isto não é um portfólio.<br>
-    É um grito com pixels.<br><br>
+    <h2>Manifesto dos Fragmentos</h2>
+    <p>
+      Não são obras acabadas. São respirações.<br>
+      Esboços que falam antes de serem entendidos.<br>
+      Cada falha é uma fresta. Cada risco, um grito silencioso.<br>
+      Este diário não busca ordem — ele confessa.<br><br>
+      É aqui que a arte se desarma. Onde o caos é bem-vindo.<br>
+      Se não fizer sentido... é porque ainda está vivo.
+    </p>
+  </section>
 
-    Se estás à procura de coerência, volta pro LinkedIn.<br>
-    Aqui é zona livre de filtros e senso comum.<br><br>
+  <section class="manifesto1">
+    <h2>Manifesto dos Rascunhos Indomáveis</h2>
+    <p>
+      Isto não é um portfólio.<br>
+      É um grito com pixels.<br><br>
+      Se estás à procura de coerência, volta pro LinkedIn.<br>
+      Aqui é zona livre de filtros e senso comum.<br><br>
+      Cada traço foi feito com raiva, café e talvez um gato na mesa.<br>
+      O perfeccionismo foi expulso à força.<br><br>
+      Este sketchbook é mais terapia do que arte.<br>
+      Mais manifesto do que currículo.<br>
+      Se não te confundiu, volta e lê de novo.
+    </p>
+  </section>
 
-    Cada traço foi feito com raiva, café e talvez um gato na mesa.<br>
-    O perfeccionismo foi expulso à força.<br><br>
+  <div class="sketch-grid">
+    <img src="1.jpg" alt="Esboço pessoal">
+    <img src="2.jpg" alt="Experimentação de cor">
+    <img src="3.jpg" alt="Fragmento emocional">
+  </div>
 
-    Este sketchbook é mais terapia do que arte.<br>
-    Mais manifesto do que currículo.<br>
-    Se não te confundiu, volta e lê de novo.
-  </p>
-</section>
-<!-- Substituir o script automático por este botão: -->
-<a href="index.html"><button>🔙 Voltar ao mundo real</button></a>
+  <div class="return-button">
+    <a href="index.html">
+      <button>🔙 Voltar ao mundo real</button>
+    </a>
+  </div>
 
 </body>
 </html>
+
 
