@@ -8,22 +8,29 @@
       background: #0e0e0e;
       color: #f5f5f5;
       font-family: 'Courier New', monospace;
+      margin: 0;
+      padding: 40px 20px;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 32px;
+      margin-bottom: 10px;
     }
 
     .intro-sketch {
       font-style: italic;
       color: #ccc;
-      margin: 20px auto;
       text-align: center;
       max-width: 600px;
+      margin: 0 auto 40px;
     }
 
     .sketch-grid {
       display: flex;
       flex-wrap: wrap;
-      gap: 20px;
+      gap: 30px;
       justify-content: center;
-      margin-top: 30px;
     }
 
     .sketch-grid img {
@@ -31,6 +38,7 @@
       border-radius: 4px;
       box-shadow: 0 4px 20px rgba(255, 255, 255, 0.1);
       transition: transform 0.3s ease;
+      object-fit: cover;
     }
 
     .sketch-grid img:hover {
@@ -51,3 +59,4 @@
   </section>
 </body>
 </html>
+
