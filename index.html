@@ -54,6 +54,8 @@
     }
     .portfolio-item img {
       width: 100%;
+      height: 250px;
+      object-fit: cover;
       border-top-left-radius: 8px;
       border-top-right-radius: 8px;
     }
@@ -64,11 +66,18 @@
     }
     .behance-link {
       display: block;
-      text-align: center;
-      margin: 20px 0;
-      font-weight: bold;
-      color: #0057ff;
+      width: fit-content;
+      margin: 10px auto 0;
+      padding: 10px 20px;
+      background-color: #0057ff;
+      color: white;
+      border-radius: 6px;
       text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+    .behance-link:hover {
+      background-color: #003fcc;
     }
     footer {
       background-color: #111;
@@ -89,65 +98,65 @@
   <section id="portfolio">
     <h2>Portfólio</h2>
     <div class="portfolio-grid">
+
       <div class="portfolio-item">
         <figure>
           <img src="IMG_20250619_160556.jpg" alt="Arte 1" />
           <figcaption>“Reflexo de saudade em tons suaves.”</figcaption>
         </figure>
       </div>
-      <div class="portfolio-item">
-  <figure>
-    <img src="IMG_20250722_154835.jpg" alt="Arte 2" />
-    <figcaption>“Expressão espontânea em pigmentos vivos.”</figcaption>
-  </figure>
-</div>
 
-<div class="portfolio-item">
-  <figure>
-    <img src="IMG_20250722_155133.jpg" alt="Arte 3" />
-    <figcaption>“Fragmentos visuais de um instante poético.”</figcaption>
-  </figure>
-</div>
-            <div class="portfolio-item">
-  <figure>
-    <img src="IMG_1670.JPG" alt="Arte 4" />
-    <figcaption>“Expressão espontânea em pigmentos vivos.”</figcaption>
-  </figure>
-</div>
-      <div class="portfolio-item">
-  <figure>
-    <img src="IMG_1674.JPG" alt="Arte 5" />
-    <figcaption>“Expressão espontânea em pigmentos vivos.”</figcaption>
-  </figure>
-</div>
-      <div class="portfolio-item">
-  <figure>
-    <img src="IMG_1672.JPG" alt="Arte 6" />
-    <figcaption>“Expressão espontânea em pigmentos vivos.”</figcaption>
-  </figure>
-</div>
-
-<div class="portfolio-item">
-  <figure>
-    <img src="IMG_1673.JPG" alt="Arte 7" />
-    <figcaption>“Fragmentos visuais de um instante poético.”</figcaption>
-  </figure>
-</div>
-
-
-
-
-
-      <!-- Repete os blocos com novas imagens e figcaptions -->
-      
       <div class="portfolio-item">
         <figure>
-          <img src="IMG_1673.JPG" alt="Arte 11" />
+          <img src="IMG_20250722_154835.jpg" alt="Arte 2" />
+          <figcaption>“Movimento vibrante com calma interior.”</figcaption>
+        </figure>
+      </div>
+
+      <div class="portfolio-item">
+        <figure>
+          <img src="IMG_20250722_155133.jpg" alt="Arte 3" />
+          <figcaption>“Pigmentos em diálogo com o silêncio.”</figcaption>
+        </figure>
+      </div>
+
+      <div class="portfolio-item">
+        <figure>
+          <img src="IMG_1670.JPG" alt="Arte 4" />
+          <figcaption>“Narrativa abstrata em fluxo cromático.”</figcaption>
+        </figure>
+      </div>
+
+      <div class="portfolio-item">
+        <figure>
+          <img src="IMG_1674.JPG" alt="Arte 5" />
+          <figcaption>“Sussurros visuais num campo de intensidade.”</figcaption>
+        </figure>
+      </div>
+
+      <div class="portfolio-item">
+        <figure>
+          <img src="IMG_1672.JPG" alt="Arte 6" />
+          <figcaption>“Emoções suspensas em transparência vibrante.”</figcaption>
+        </figure>
+      </div>
+
+      <div class="portfolio-item">
+        <figure>
+          <img src="IMG_1673.JPG" alt="Arte 7" />
+          <figcaption>“Eco visual do subconsciente.”</figcaption>
+        </figure>
+      </div>
+
+      <div class="portfolio-item">
+        <figure>
+          <img src="IMG_1675.JPG" alt="Arte 8" />
           <figcaption>“Silêncio visual com presença energética.”</figcaption>
         </figure>
         <a href="https://www.behance.net/gallery/129104233/O-Amor" class="behance-link" target="_blank">Ver “O Amor” no Behance</a>
         <a href="https://www.behance.net/gallery/129104119/Traje" class="behance-link" target="_blank">Ver “Traje” no Behance</a>
       </div>
+
     </div>
   </section>
 
@@ -157,6 +166,7 @@
 
 </body>
 </html>
+
 
 
 
