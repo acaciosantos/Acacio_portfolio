@@ -208,6 +208,46 @@ body {
 .contact-footer a:hover {
   color: #ccc;
 }
+    section#processo {
+  background: linear-gradient(to bottom right, #fdfdfd, #f4f4ff);
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+}
+
+.intro-processo {
+  font-style: italic;
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.processo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+.processo-item img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  object-fit: cover;
+}
+
+.processo-item:hover img {
+  transform: scale(1.03);
+}
+
+.processo-item figcaption {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #444;
+  font-style: italic;
+}
+
 
 
   </style>
@@ -236,6 +276,29 @@ body {
       </div>
     </div>
     </section>
+  <section id="processo">
+  <h2>Processo Criativo</h2>
+  <p class="intro-processo">
+    Desde o primeiro traço à última lavada de cor — aqui partilho o percurso invisível por detrás de cada obra.
+  </p>
+
+  <div class="processo-grid">
+    <div class="processo-item">
+      <img src="10.jpg" alt="Esboço inicial em lápis" />
+      <figcaption>Esboço inicial: emoção captada no primeiro gesto.</figcaption>
+    </div>
+    <div class="processo-item">
+      <img src="9.jpg" alt="Aplicação de cor em aguarela" />
+      <figcaption>Camadas de aguarela: transparências e luz.</figcaption>
+    </div>
+    <div class="processo-item">
+      <img src="8.jpg" alt="Finalização digital" />
+      <figcaption>Refinamento digital: fusão de técnica e sentimento.</figcaption>
+    </div>
+  </div>
+</section>
+
+
 
   <section id="portfolio">
   <h2>Portfólio</h2>
