@@ -131,6 +131,17 @@
       margin: 0;
       color: #333;
     }
+    .sobre-container {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease-out;
+}
+
+.sobre-container.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
   </style>
 </head>
 <body>
@@ -227,6 +238,18 @@
     <a href="https://www.behance.net/gallery/129104119/Traje" class="behance-link" target="_blank">Ver “Traje” no Behance</a>
   </div>
 </section>
+  <script>
+  window.addEventListener('scroll', function () {
+    const sobre = document.querySelector('.sobre-container');
+    const pos = sobre.getBoundingClientRect().top;
+    const windowHeight = window.innerHeight;
+
+    if (pos < windowHeight - 100) {
+      sobre.classList.add('visible');
+    }
+  });
+</script>
+
 
   <footer>
     &copy; 2025 Acácio Santos — Todos os direitos reservados
