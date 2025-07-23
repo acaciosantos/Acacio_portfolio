@@ -168,6 +168,32 @@
 body {
   background: linear-gradient(to bottom right, #fdfdfd, #f4f4ff);
 }
+.diario-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.diario-item img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  object-fit: cover;
+}
+
+.diario-item:hover img {
+  transform: scale(1.03);
+}
+
+.intro-diario {
+  font-size: 16px;
+  text-align: center;
+  font-style: italic;
+  color: #555;
+  margin-bottom: 10px;
+}
 
 
   </style>
@@ -284,6 +310,22 @@ body {
     <a href="https://www.behance.net/gallery/129104119/Traje" class="behance-link" target="_blank">Ver “Traje” no Behance</a>
   </div>
 </section>
+  <section id="diario">
+  <h2>Diário Gráfico</h2>
+  <p class="intro-diario">
+    Uma janela para os meus cadernos — traços espontâneos, ideias em progresso e fragmentos visuais do cotidiano.
+  </p>
+  <div class="diario-grid">
+    <!-- Repetir este bloco para cada página do diário -->
+    <div class="diario-item">
+      <a href="1.jpg" data-lightbox="diario" data-title="Estudo de formas em aguarela">
+        <img src="1.jpg" alt="Página do diário gráfico" />
+      </a>
+    </div>
+    <!-- mais entradas -->
+  </div>
+</section>
+
   <script>
   window.addEventListener('scroll', function () {
     const sobre = document.querySelector('.sobre-container');
